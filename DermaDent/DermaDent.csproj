@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46CA964D-C6B7-4A7B-9D6F-DC6EA043EE96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DermaDent</RootNamespace>
+    <AssemblyName>Solident</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>ico_XlE_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BehComponents">
+      <HintPath>C:\Users\javan\Downloads\PersianCalender\PersianCalender\bin\Debug\BehComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=14.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telegram.Bot.14.5.0\lib\net45\Telegram.Bot.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bot\ChargeManager.cs" />
+    <Compile Include="Bot\DashBoard.cs" />
+    <Compile Include="Bot\FileStreamManagement.cs" />
+    <Compile Include="Bot\FormatPrinter.cs" />
+    <Compile Include="Bot\FormatPrinterChargeReport.cs" />
+    <Compile Include="Bot\MainPage.cs" />
+    <Compile Include="Bot\ManageFileDocument.cs" />
+    <Compile Include="Bot\PageHandler.cs" />
+    <Compile Include="Bot\ReceieveFileHandler.cs" />
+    <Compile Include="Bot\RegisterProfile.cs" />
+    <Compile Include="Bot\RobotManager.cs" />
+    <Compile Include="Bot\SendKeyboard.cs" />
+    <Compile Include="Bot\SQLServerTH.cs" />
+    <Compile Include="Bot\TransmitPatientDocument.cs" />
+    <Compile Include="Bot\UserDetailManager.cs" />
+    <Compile Include="Bot\UserGuide.cs" />
+    <Compile Include="CashPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CashPayment.Designer.cs">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CMPRefer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CMPRefer.Designer.cs">
+      <DependentUpon>CMPRefer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Culture.cs" />
+    <Compile Include="CurrentDateTimePersian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CurrentDateTimePersian.Designer.cs">
+      <DependentUpon>CurrentDateTimePersian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseConnection.cs" />
+    <Compile Include="DatabaseManager.cs" />
+    <Compile Include="FormsV1\DialogBoxImageExist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\DialogBoxImageExist.Designer.cs">
+      <DependentUpon>DialogBoxImageExist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DoctorNameComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DoctorNameComboBox.Designer.cs">
+      <DependentUpon>DoctorNameComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\DocumentManager.cs" />
+    <Compile Include="Components\FarsiDatePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\FarsiDatePicker.Designer.cs">
+      <DependentUpon>FarsiDatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMDeclareServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMDeclareServices.Designer.cs">
+      <DependentUpon>FRMDeclareServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMAllAllocatedTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMAllAllocatedTime.Designer.cs">
+      <DependentUpon>FRMAllAllocatedTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMAllocatTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMAllocatTime.Designer.cs">
+      <DependentUpon>FRMAllocatTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\FRMEditUserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\FRMEditUserProfile.Designer.cs">
+      <DependentUpon>FRMEditUserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\FRMAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\FRMAuthentication.Designer.cs">
+      <DependentUpon>FRMAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\FRMCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\FRMCashier.Designer.cs">
+      <DependentUpon>FRMCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\FRMCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\FRMCharge.Designer.cs">
+      <DependentUpon>FRMCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMDiagnosisTreatmentPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMDiagnosisTreatmentPlan.Designer.cs">
+      <DependentUpon>FRMDiagnosisTreatmentPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMHomePage.Designer.cs">
+      <DependentUpon>FRMHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMManageDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMManageDocuments.Designer.cs">
+      <DependentUpon>FRMManageDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMPatientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMPatientInfo.Designer.cs">
+      <DependentUpon>FRMPatientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMPatientRespect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMPatientRespect.Designer.cs">
+      <DependentUpon>FRMPatientRespect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\FRMReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\FRMReport.Designer.cs">
+      <DependentUpon>FRMReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMRepayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMRepayment.Designer.cs">
+      <DependentUpon>FRMRepayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMReserverdTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMReserverdTime.Designer.cs">
+      <DependentUpon>FRMReserverdTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMSearchPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMSearchPatient.Designer.cs">
+      <DependentUpon>FRMSearchPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMSearchTimeAllocated.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMSearchTimeAllocated.Designer.cs">
+      <DependentUpon>FRMSearchTimeAllocated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMState.Designer.cs">
+      <DependentUpon>FRMState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMTimeAllocationSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMTimeAllocationSystem.Designer.cs">
+      <DependentUpon>FRMTimeAllocationSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMTimeDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMTimeDivision.Designer.cs">
+      <DependentUpon>FRMTimeDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMTimeQueueList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMTimeQueueList.Designer.cs">
+      <DependentUpon>FRMTimeQueueList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\FRMTreatmentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\FRMTreatmentReport.Designer.cs">
+      <DependentUpon>FRMTreatmentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\GeneralTimeTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\GeneralTimeTable.Designer.cs">
+      <DependentUpon>GeneralTimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\IconnedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\IconnedButton.Designer.cs">
+      <DependentUpon>IconnedButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\ImageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\ImageDialog.Designer.cs">
+      <DependentUpon>ImageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMTimingDiagnoses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMTimingDiagnoses.Designer.cs">
+      <DependentUpon>FRMTimingDiagnoses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV2\FRMUserPaymentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMUserPaymentList.Designer.cs">
+      <DependentUpon>FRMUserPaymentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMAboutUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMAboutUS.Designer.cs">
+      <DependentUpon>FRMAboutUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMBotManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMBotManager.Designer.cs">
+      <DependentUpon>FRMBotManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMReportSoftwareError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMReportSoftwareError.Designer.cs">
+      <DependentUpon>FRMReportSoftwareError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageViewer.cs" />
+    <Compile Include="ImageViewer.Designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PatientOveralDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PatientOveralDetail.Designer.cs">
+      <DependentUpon>PatientOveralDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsV1\FRMPatientProfileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\FRMPatientProfileManager.Designer.cs">
+      <DependentUpon>FRMPatientProfileManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PatientRegisterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PatientRegisterControl.Designer.cs">
+      <DependentUpon>PatientRegisterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PersianDateTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InsuranceServicesType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PersianDateTime.cs" />
+    <Compile Include="PNumberTString.cs" />
+    <Compile Include="ProfeciencyCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="R_hisTableClassMap\Hazineh2.cs" />
+    <Compile Include="R_hisTableClassMap\Infodentist.cs" />
+    <Compile Include="R_hisTableClassMap\infoService.cs" />
+    <Compile Include="R_hisTableClassMap\InfoSick.cs" />
+    <Compile Include="R_hisTableClassMap\NobatDetail1.cs" />
+    <Compile Include="ScreenCapture.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="Components\SearchBySuggestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SearchBySuggestion.Designer.cs">
+      <DependentUpon>SearchBySuggestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\SimpleQuadrant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SimpleQuadrant.Designer.cs">
+      <DependentUpon>SimpleQuadrant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLTableTracker\dbMonitor.cs" />
+    <Compile Include="Components\SystemicIlness.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SystemicIlness.Designer.cs">
+      <DependentUpon>SystemicIlness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TeethQuadrant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\TeethQuadrant.Designer.cs">
+      <DependentUpon>TeethQuadrant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThumbnailController.cs" />
+    <Compile Include="ThumbnailFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\timeFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\timeFilter.Designer.cs">
+      <DependentUpon>timeFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs" />
+    <Compile Include="FormsV1\FRMUserProfileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV1\FRMUserProfileList.Designer.cs">
+      <DependentUpon>FRMUserProfileList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CashPayment.resx">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMPRefer.resx">
+      <DependentUpon>CMPRefer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentDateTimePersian.resx">
+      <DependentUpon>CurrentDateTimePersian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\DialogBoxImageExist.resx">
+      <DependentUpon>DialogBoxImageExist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\FarsiDatePicker.resx">
+      <DependentUpon>FarsiDatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMDeclareServices.resx">
+      <DependentUpon>FRMDeclareServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMAllAllocatedTime.resx">
+      <DependentUpon>FRMAllAllocatedTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMAllocatTime.resx">
+      <DependentUpon>FRMAllocatTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\FRMEditUserProfile.resx">
+      <DependentUpon>FRMEditUserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\FRMAuthentication.resx">
+      <DependentUpon>FRMAuthentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\FRMCashier.resx">
+      <DependentUpon>FRMCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\FRMCharge.resx">
+      <DependentUpon>FRMCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMDiagnosisTreatmentPlan.resx">
+      <DependentUpon>FRMDiagnosisTreatmentPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMHomePage.fa-IR.resx">
+      <DependentUpon>FRMHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMHomePage.resx">
+      <DependentUpon>FRMHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMManageDocuments.resx">
+      <DependentUpon>FRMManageDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMPatientInfo.resx">
+      <DependentUpon>FRMPatientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMPatientRespect.resx">
+      <DependentUpon>FRMPatientRespect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\FRMReport.resx">
+      <DependentUpon>FRMReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMRepayment.resx">
+      <DependentUpon>FRMRepayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMReserverdTime.resx">
+      <DependentUpon>FRMReserverdTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMSearchPatient.resx">
+      <DependentUpon>FRMSearchPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMSearchTimeAllocated.resx">
+      <DependentUpon>FRMSearchTimeAllocated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMState.resx">
+      <DependentUpon>FRMState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMTimeAllocationSystem.resx">
+      <DependentUpon>FRMTimeAllocationSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMTimeDivision.resx">
+      <DependentUpon>FRMTimeDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMTimeQueueList.resx">
+      <DependentUpon>FRMTimeQueueList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\FRMTreatmentReport.resx">
+      <DependentUpon>FRMTreatmentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\GeneralTimeTable.resx">
+      <DependentUpon>GeneralTimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\ImageDialog.resx">
+      <DependentUpon>ImageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMTimingDiagnoses.resx">
+      <DependentUpon>FRMTimingDiagnoses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMUserPaymentList.resx">
+      <DependentUpon>FRMUserPaymentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMAboutUS.resx">
+      <DependentUpon>FRMAboutUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMBotManager.resx">
+      <DependentUpon>FRMBotManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMReportSoftwareError.resx">
+      <DependentUpon>FRMReportSoftwareError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageViewer.resx">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PatientOveralDetail.resx">
+      <DependentUpon>PatientOveralDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\FRMPatientProfileManager.resx">
+      <DependentUpon>FRMPatientProfileManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PatientRegisterControl.resx">
+      <DependentUpon>PatientRegisterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Components\SearchBySuggestion.resx">
+      <DependentUpon>SearchBySuggestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SimpleQuadrant.resx">
+      <DependentUpon>SimpleQuadrant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SystemicIlness.resx">
+      <DependentUpon>SystemicIlness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\TeethQuadrant.resx">
+      <DependentUpon>TeethQuadrant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\timeFilter.resx">
+      <DependentUpon>timeFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsV1\FRMUserProfileList.resx">
+      <DependentUpon>FRMUserProfileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Grid.mvc.readme" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Views\Shared\_Grid.cshtml" />
+    <None Include="Views\Shared\_GridPager.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BehComponents.dll" />
+    <Content Include="Content\Gridmvc.css" />
+    <Content Include="ico_XlE_icon.ico" />
+    <Content Include="if_Dental_-_Tooth_-_Dentist_-_Dentistry_28_2185056.ico" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\hp_folder_backup.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\cashier.png" />
+    <None Include="Resources\cloud-computing.png" />
+    <None Include="Resources\warehouse-inventory-icon-6.png" />
+    <None Include="Resources\5808c6eb525d5d13ecc1ff81-iconbig.jpg" />
+    <None Include="Resources\bot-service.png" />
+    <None Include="Resources\bb78bd51769a768855c9cf5bf47d1224.png" />
+    <None Include="Resources\bb78bd51769a768855c9cf5bf47d12242.png" />
+    <None Include="Resources\waitnew.gif" />
+    <None Include="Resources\ezgif-4-d6af6e52f5.gif" />
+    <None Include="Resources\loadingo.gif" />
+    <None Include="Resources\ezgif-4-4279502b0c.gif" />
+    <None Include="Resources\ezgif-4-8d018b9503.gif" />
+    <None Include="Resources\145.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\Go back.png" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\Back.png" />
+    <None Include="Resources\Calendar1.png" />
+    <None Include="Resources\Clipboard.png" />
+    <None Include="Resources\ClockDe.png" />
+    <None Include="Resources\Apps-preferences-contact-list-icon.png" />
+    <None Include="Resources\Apps-preferences-system-time-icon.png" />
+    <None Include="Resources\Doctor-icon.png" />
+    <None Include="Resources\Healthcare-Clinic-icon.png" />
+    <None Include="Resources\checklist-icon.png" />
+    <None Include="Resources\cashier-icon.png" />
+    <None Include="Resources\Cash-icon.png" />
+    <None Include="Resources\Aboutus-icon.png" />
+    <None Include="Resources\deleteerror-file-icon.png" />
+    <None Include="Resources\Health-care-shield-icon32.png" />
+    <None Include="Resources\CosmeticRestoration.png" />
+    <Content Include="Resources\Help book.png" />
+    <None Include="Resources\icons8-hospital-24.png" />
+    <None Include="Resources\icons8-walking-24.png" />
+    <None Include="Resources\icons8-cast-24.png" />
+    <None Include="Resources\icons8-save-24.png" />
+    <None Include="Resources\icons8-edit-24.png" />
+    <None Include="Resources\icons8-unavailable-24.png" />
+    <None Include="Resources\icons8-close-window-24.png" />
+    <None Include="Resources\icons8-close-window-241.png" />
+    <None Include="Resources\icons8-trash-20.png" />
+    <None Include="Resources\icons8-clear-symbol-24.png" />
+    <None Include="Resources\icons8-send-to-printer-24.png" />
+    <None Include="Resources\icons8-print-24.png" />
+    <None Include="Resources\help-icon.png" />
+    <None Include="Resources\icons8-check-file-24.png" />
+    <None Include="Resources\icons8-microsoft-excel-24.png" />
+    <Content Include="Resources\images.png" />
+    <Content Include="Resources\List2.png" />
+    <None Include="Resources\Next - Copy.png" />
+    <None Include="Resources\medical-report-icon.png" />
+    <Content Include="Resources\NotesBook.png" />
+    <None Include="Resources\pricelist.png" />
+    <None Include="Resources\Ortho64.png" />
+    <None Include="Resources\Ortho128.png" />
+    <None Include="Resources\Ortho96.png" />
+    <None Include="Resources\RadioTrapy.png" />
+    <Content Include="Resources\Redo.png" />
+    <Content Include="Resources\Refresh-icon - Copy.png" />
+    <Content Include="Resources\Refresh-icon.png" />
+    <Content Include="Resources\Refresh.png" />
+    <Content Include="Resources\Refresh1.png" />
+    <None Include="Resources\Refresh2.png" />
+    <Content Include="Resources\Report2.png" />
+    <None Include="Resources\Reports-icon.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\Search.png" />
+    <None Include="Resources\skleton.png" />
+    <Content Include="Resources\Table.png" />
+    <None Include="Resources\vector-wallpapers-25341-9610475.jpg" />
+    <None Include="Resources\Text-Edit-icon.png" />
+    <None Include="Resources\Tooth-blue-icon.png" />
+    <None Include="Resources\toolsicon.png" />
+    <None Include="Resources\Time-Machine-icon.png" />
+    <None Include="Resources\violetrectTime-Machine-icon.png" />
+    <None Include="Resources\User-Group-icon.png" />
+    <None Include="Resources\WireSurgery.png" />
+    <None Include="Resources\WireSurgeryBlack.png" />
+    <Content Include="Resources\Yes.png" />
+    <Content Include="Scripts\gridmvc.js" />
+    <Content Include="Scripts\gridmvc.lang.fr.js" />
+    <Content Include="Scripts\gridmvc.lang.ru.js" />
+    <Content Include="Scripts\gridmvc.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

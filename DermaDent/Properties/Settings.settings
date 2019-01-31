@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DermaDent.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FNameSick" Type="System.String" Scope="User">
+      <Value Profile="(Default)">columnHeader7</Value>
+    </Setting>
+    <Setting Name="LNameSick" Type="System.String" Scope="User">
+      <Value Profile="(Default)">نام خانوادگی</Value>
+    </Setting>
+    <Setting Name="IDsick" Type="System.String" Scope="User">
+      <Value Profile="(Default)">No</Value>
+    </Setting>
+    <Setting Name="PatientDocumentSavePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\</Value>
+    </Setting>
+    <Setting Name="_UserDocumentRootPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Solident\Documents</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

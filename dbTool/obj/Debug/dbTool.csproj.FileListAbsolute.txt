@@ -1,0 +1,8 @@
+E:\Private\den\Solident_1397.11.06\dbTool\bin\Debug\dbTool.exe.config
+E:\Private\den\Solident_1397.11.06\dbTool\bin\Debug\dbTool.exe
+E:\Private\den\Solident_1397.11.06\dbTool\bin\Debug\dbTool.pdb
+E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.Form1.resources
+E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.Properties.Resources.resources
+E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.csproj.GenerateResource.Cache
+E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.exe
+E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.pdb
