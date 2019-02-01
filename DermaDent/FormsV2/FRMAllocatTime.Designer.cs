@@ -88,6 +88,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sendsms = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVQList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DTGVReservedTimeList)).BeginInit();
@@ -310,7 +311,8 @@
             this.Column8,
             this.Column9,
             this.Column10,
-            this.Status});
+            this.Status,
+            this.sendsms});
             this.DTGVReservedTimeList.Location = new System.Drawing.Point(0, 291);
             this.DTGVReservedTimeList.Name = "DTGVReservedTimeList";
             this.DTGVReservedTimeList.RowHeadersVisible = false;
@@ -749,7 +751,7 @@
             this.Column6.HeaderText = "تلفن ثابت";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 90;
+            this.Column6.Width = 85;
             // 
             // Column12
             // 
@@ -757,7 +759,7 @@
             this.Column12.HeaderText = "تلفن همراه";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            this.Column12.Width = 90;
+            this.Column12.Width = 85;
             // 
             // Column7
             // 
@@ -795,7 +797,15 @@
             this.Status.HeaderText = "وضعیت";
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
+            this.Status.Visible = false;
             this.Status.Width = 70;
+            // 
+            // sendsms
+            // 
+            this.sendsms.DataPropertyName = "sendsms";
+            this.sendsms.HeaderText = "ارسال sms";
+            this.sendsms.Name = "sendsms";
+            this.sendsms.Width = 80;
             // 
             // FRMAllocatTime
             // 
@@ -885,5 +895,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sendsms;
     }
 }
