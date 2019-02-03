@@ -310,7 +310,7 @@ namespace DermaDent
       ,[job_location]
       ,[name_user]
       ,[Birthday_city]
-        FROM InfoSick WHERE IDsick>'0'"; //TODO: correct the query
+        FROM InfoSick WHERE IDsick>'-1'"; //TODO: correct the query
                             
             //if (lName != null )
             //{

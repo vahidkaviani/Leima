@@ -73,11 +73,14 @@ namespace DermaDent
             if (_PresentingMonth == 1)
             {
                 _PresentingMonth = 12;
-                _PresentingYear -= 1;
+                _PresentingYear --;
             }
             else
                 _PresentingMonth--;
             this.Refresh();
+            EventArgs e = new EventArgs();
+            if (OnSelectedDayChanged != null)
+                OnSelectedDayChanged(this, e);
             return true;
         }
         public void GoToDate(int year,int month,int day)

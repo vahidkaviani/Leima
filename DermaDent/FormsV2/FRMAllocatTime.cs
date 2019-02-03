@@ -280,10 +280,12 @@ namespace DermaDent
 
                 if (SelectedItemListview >= 0)
                 {
+                    MenuItem mi = new MenuItem();
                     ContextMenu m = new ContextMenu();
+                    m.RightToLeft = RightToLeft.Yes;
                     m.MenuItems.Add("تخصیص", Replace);
                     m.MenuItems.Add("انتقال به بیمار دیگر", Replace);
-                    //m.MenuItems.Add("ثبت گزارش درمان", RegisterTreatmentPlanclick);
+                    m.MenuItems.Add("ارسال پیامک", sendNotificationMessage);
                     //m.MenuItems.Add("غیبت", PatientAbsentclick);
                     m.MenuItems.Add("افزودن نوبت", createNewVisitTime);
                     m.MenuItems.Add("کنسل بیمار", PatientCancelClick);
@@ -294,6 +296,11 @@ namespace DermaDent
                     m.Show(DTGVReservedTimeList, new Point(e.X, e.Y));
                 }
             }
+        }
+
+        private void sendNotificationMessage(object sender, EventArgs e)
+        {
+            MessageBox.Show("کاربر گرامی\r\nبا عرض پوزش پنل ارسال پیامک شما فعال نیست", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
         }
 
         private void createNewVisitTime(object sender, EventArgs e)
