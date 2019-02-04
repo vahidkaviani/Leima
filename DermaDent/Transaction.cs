@@ -318,11 +318,11 @@ namespace DermaDent
             //}
             if (!string.IsNullOrEmpty(FirstName))
             {
-                QUERY += " AND FNameSick Like N'%" + FirstName + "%' ";
+                QUERY += " AND FNameSick Like '%" + FirstName + "%' ";
             }
             if (!string.IsNullOrEmpty(LastName))
             {
-                QUERY += " AND LNameSick Like N'%" + LastName + "%' ";
+                QUERY += " AND LNameSick Like '%" + LastName + "%' ";
             }
             if (!string.IsNullOrEmpty(FileID))
             {

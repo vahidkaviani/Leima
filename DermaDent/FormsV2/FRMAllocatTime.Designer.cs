@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMAllocatTime));
             this.BTNClose = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -386,7 +387,7 @@
             // 
             // Column7
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.Column7.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column7.HeaderText = "9";
             this.Column7.Name = "Column7";
@@ -471,6 +472,7 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "مشخصات بیمار :";
+            this.groupBox2.Visible = false;
             // 
             // BTNSearchPatient
             // 
@@ -521,11 +523,13 @@
             // 
             // doctorNameComboBox1
             // 
+            this.doctorNameComboBox1.DataSource = ((object)(resources.GetObject("doctorNameComboBox1.DataSource")));
             this.doctorNameComboBox1.FormattingEnabled = true;
             this.doctorNameComboBox1.Location = new System.Drawing.Point(42, 121);
             this.doctorNameComboBox1.Name = "doctorNameComboBox1";
             this.doctorNameComboBox1.Size = new System.Drawing.Size(180, 21);
             this.doctorNameComboBox1.TabIndex = 10;
+            this.doctorNameComboBox1.Visible = false;
             // 
             // maskedTextBox1
             // 
@@ -537,6 +541,7 @@
             this.maskedTextBox1.TabIndex = 9;
             this.maskedTextBox1.Text = "1500";
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox1.Visible = false;
             // 
             // BTNSaveTime
             // 
@@ -546,6 +551,7 @@
             this.BTNSaveTime.Size = new System.Drawing.Size(32, 32);
             this.BTNSaveTime.TabIndex = 8;
             this.BTNSaveTime.UseVisualStyleBackColor = true;
+            this.BTNSaveTime.Visible = false;
             this.BTNSaveTime.Click += new System.EventHandler(this.BTNSaveTime_Click);
             // 
             // persianDateTimeBox1
@@ -576,6 +582,7 @@
             this.comboBox5.Size = new System.Drawing.Size(180, 21);
             this.comboBox5.TabIndex = 7;
             this.comboBox5.Text = "شیفت صبح";
+            this.comboBox5.Visible = false;
             // 
             // NUDYear
             // 
@@ -618,6 +625,7 @@
             this.CMBBXServiceName.Name = "CMBBXServiceName";
             this.CMBBXServiceName.Size = new System.Drawing.Size(180, 21);
             this.CMBBXServiceName.TabIndex = 7;
+            this.CMBBXServiceName.Visible = false;
             // 
             // label3
             // 
@@ -638,6 +646,7 @@
             this.checkBox3.TabIndex = 5;
             this.checkBox3.Text = "شیفت";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.Visible = false;
             // 
             // label4
             // 
@@ -657,6 +666,7 @@
             this.checkBox2.TabIndex = 5;
             this.checkBox2.Text = "پزشک معالج";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Visible = false;
             // 
             // CMBBXMonthNames
             // 
@@ -690,6 +700,7 @@
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "تخصص";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             // 
             // CMBBXDay
             // 
@@ -741,6 +752,7 @@
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 3;
             this.label6.Text = "ساعت :";
+            this.label6.Visible = false;
             // 
             // label5
             // 
