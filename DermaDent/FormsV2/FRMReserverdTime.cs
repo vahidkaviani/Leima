@@ -41,7 +41,7 @@ namespace DermaDent
             dataGridView1.Columns[8].HeaderCell.Style.Font = new Font("Wingdings 3", 10, FontStyle.Regular);
             dataGridView1.Columns[9].HeaderCell.Style.Font = new Font("Wingdings 3", 10, FontStyle.Regular);
             persianDateTimeBox1.Text = PersianDateTime.GetPersianDate(DateTime.Now);
-            persianDateTimeBox2.Text = PersianDateTime.GetPersianDate(DateTime.Now.AddDays(1));
+            persianDateTimeBox2.Text = PersianDateTime.GetPersianDate(DateTime.Now);
             UpdateTime();
             dataGridView1.CellFormatting += DataGridView1_CellFormatting;
         }
@@ -83,7 +83,7 @@ namespace DermaDent
 
         private void UpdateTime()
         {
-            dataGridView1.DataSource = Transaction.GetReservedTime(persianDateTimeBox1.Text, persianDateTimeBox2.Text);
+            dataGridView1.DataSource = Transaction.GetReservedTime(persianDateTimeBox1.Text, persianDateTimeBox2.Text,OnlyAllocated:true);
         }
         int SelectedItemListview = -1;
         //private void RemovePresenttime(object sender, EventArgs e)
@@ -185,6 +185,11 @@ namespace DermaDent
             FRMPatientRespect fpr = new FRMPatientRespect("",PatientID: ((string)dataGridView1.Rows[SelectedItemListview].Cells["PatientID"].Value));
             fpr.MdiParent = this.MdiParent;
             fpr.Show();
+        }
+
+        private void BTNShowTimes_Click(object sender, EventArgs e)
+        {
+           UpdateTime();
         }
     }
 }

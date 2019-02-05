@@ -92,7 +92,7 @@ namespace DermaDent
                 MessageBox.Show(message);
                 this.Close();
             }
-            catch { MessageBox.Show("خطا"); }
+            catch (Exception ex){ MessageBox.Show("خطا"); }
         }
 
         private void iconnedButton2_Click(object sender, EventArgs e)

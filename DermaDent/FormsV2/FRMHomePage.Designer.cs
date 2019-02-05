@@ -32,19 +32,37 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMHomePage));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ورودوویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TTBTNRegisterNewPatient = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTNTratmentAndDetect = new System.Windows.Forms.ToolStripMenuItem();
+            this.سیستموقتدهیبهبیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TTBTNTimeAllocatedPatient = new System.Windows.Forms.ToolStripMenuItem();
+            this.TTBTNExit = new System.Windows.Forms.ToolStripMenuItem();
             this.عملیاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TTBTnCashier = new System.Windows.Forms.ToolStripMenuItem();
+            this.ثبتگزارشدرمانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TTManageRadioGraphyImages = new System.Windows.Forms.ToolStripMenuItem();
             this.تعاریفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTNTTDeclareServices = new System.Windows.Forms.ToolStripMenuItem();
+            this.نیروهایتخصصیمرکزToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعرفههایدرمانیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.روزشیفتهایکاریToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TTTimeDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.گزارشهاToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.گزارشپرداختهایبیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.گزارشکارکردپزشکانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.گزارشصندقToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TTBTNPatientTimes = new System.Windows.Forms.ToolStripMenuItem();
             this.LSTPatientLST = new System.Windows.Forms.ToolStripMenuItem();
             this.امکاناتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.مدیریتتصاویررادیوگرافیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.دربارهنرمافزارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BTNAboutUs = new System.Windows.Forms.ToolStripMenuItem();
+            this.TTBTNErrorReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.درخواستکمکToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LBLUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.LBLTTTodayDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.UpdateStates = new System.Windows.Forms.Timer(this.components);
-            this.TTTimeDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.BTNICReserveTime = new DermaDent.IconnedButton();
             this.BTNPanelEdit = new DermaDent.IconnedButton();
             this.BTNPanelRegistery = new DermaDent.IconnedButton();
@@ -53,25 +71,8 @@
             this.BTNPanelTools = new DermaDent.IconnedButton();
             this.BTNPanelInfo = new DermaDent.IconnedButton();
             this.BTNPanelExit = new DermaDent.IconnedButton();
-            this.TTBTNRegisterNewPatient = new System.Windows.Forms.ToolStripMenuItem();
-            this.BTNTratmentAndDetect = new System.Windows.Forms.ToolStripMenuItem();
-            this.سیستموقتدهیبهبیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTBTNTimeAllocatedPatient = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTBTNExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTBTnCashier = new System.Windows.Forms.ToolStripMenuItem();
-            this.ثبتگزارشدرمانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTManageRadioGraphyImages = new System.Windows.Forms.ToolStripMenuItem();
-            this.BTNTTDeclareServices = new System.Windows.Forms.ToolStripMenuItem();
-            this.نیروهایتخصصیمرکزToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعرفههایدرمانیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.روزشیفتهایکاریToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.گزارشپرداختهایبیمارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.گزارشکارکردپزشکانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.گزارشصندقToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTBTNPatientTimes = new System.Windows.Forms.ToolStripMenuItem();
-            this.BTNAboutUs = new System.Windows.Forms.ToolStripMenuItem();
-            this.TTBTNErrorReport = new System.Windows.Forms.ToolStripMenuItem();
-            this.درخواستکمکToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateStates = new System.Windows.Forms.Timer(this.components);
+            this.جستوجویسریعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -100,14 +101,70 @@
             this.ورودوویرایشToolStripMenuItem.Name = "ورودوویرایشToolStripMenuItem";
             resources.ApplyResources(this.ورودوویرایشToolStripMenuItem, "ورودوویرایشToolStripMenuItem");
             // 
+            // TTBTNRegisterNewPatient
+            // 
+            this.TTBTNRegisterNewPatient.Image = global::DermaDent.Properties.Resources.Healthcare_Clinic_icon;
+            this.TTBTNRegisterNewPatient.Name = "TTBTNRegisterNewPatient";
+            resources.ApplyResources(this.TTBTNRegisterNewPatient, "TTBTNRegisterNewPatient");
+            this.TTBTNRegisterNewPatient.Click += new System.EventHandler(this.RegisterNewPatient);
+            // 
+            // BTNTratmentAndDetect
+            // 
+            this.BTNTratmentAndDetect.Image = global::DermaDent.Properties.Resources.Doctor_icon;
+            this.BTNTratmentAndDetect.Name = "BTNTratmentAndDetect";
+            resources.ApplyResources(this.BTNTratmentAndDetect, "BTNTratmentAndDetect");
+            this.BTNTratmentAndDetect.Click += new System.EventHandler(this.BTNTratmentAndDetect_Click);
+            // 
+            // سیستموقتدهیبهبیمارToolStripMenuItem
+            // 
+            this.سیستموقتدهیبهبیمارToolStripMenuItem.Image = global::DermaDent.Properties.Resources.violetrectTime_Machine_icon;
+            this.سیستموقتدهیبهبیمارToolStripMenuItem.Name = "سیستموقتدهیبهبیمارToolStripMenuItem";
+            resources.ApplyResources(this.سیستموقتدهیبهبیمارToolStripMenuItem, "سیستموقتدهیبهبیمارToolStripMenuItem");
+            this.سیستموقتدهیبهبیمارToolStripMenuItem.Click += new System.EventHandler(this.سیستموقتدهیبهبیمارToolStripMenuItem_Click);
+            // 
+            // TTBTNTimeAllocatedPatient
+            // 
+            this.TTBTNTimeAllocatedPatient.Image = global::DermaDent.Properties.Resources.Apps_preferences_system_time_icon;
+            this.TTBTNTimeAllocatedPatient.Name = "TTBTNTimeAllocatedPatient";
+            resources.ApplyResources(this.TTBTNTimeAllocatedPatient, "TTBTNTimeAllocatedPatient");
+            this.TTBTNTimeAllocatedPatient.Click += new System.EventHandler(this.TTBTNTimeAllocatedPatient_Click);
+            // 
+            // TTBTNExit
+            // 
+            this.TTBTNExit.Image = global::DermaDent.Properties.Resources.Exit;
+            this.TTBTNExit.Name = "TTBTNExit";
+            resources.ApplyResources(this.TTBTNExit, "TTBTNExit");
+            this.TTBTNExit.Click += new System.EventHandler(this.TTBTNExit_Click);
+            // 
             // عملیاتToolStripMenuItem
             // 
             this.عملیاتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TTBTnCashier,
             this.ثبتگزارشدرمانToolStripMenuItem,
-            this.TTManageRadioGraphyImages});
+            this.TTManageRadioGraphyImages,
+            this.جستوجویسریعToolStripMenuItem});
             this.عملیاتToolStripMenuItem.Name = "عملیاتToolStripMenuItem";
             resources.ApplyResources(this.عملیاتToolStripMenuItem, "عملیاتToolStripMenuItem");
+            // 
+            // TTBTnCashier
+            // 
+            this.TTBTnCashier.Image = global::DermaDent.Properties.Resources.pricelist;
+            this.TTBTnCashier.Name = "TTBTnCashier";
+            resources.ApplyResources(this.TTBTnCashier, "TTBTnCashier");
+            this.TTBTnCashier.Click += new System.EventHandler(this.TTBTnCashier_Click);
+            // 
+            // ثبتگزارشدرمانToolStripMenuItem
+            // 
+            this.ثبتگزارشدرمانToolStripMenuItem.Image = global::DermaDent.Properties.Resources.Reports_icon;
+            this.ثبتگزارشدرمانToolStripMenuItem.Name = "ثبتگزارشدرمانToolStripMenuItem";
+            resources.ApplyResources(this.ثبتگزارشدرمانToolStripMenuItem, "ثبتگزارشدرمانToolStripMenuItem");
+            // 
+            // TTManageRadioGraphyImages
+            // 
+            this.TTManageRadioGraphyImages.Image = global::DermaDent.Properties.Resources.skleton;
+            this.TTManageRadioGraphyImages.Name = "TTManageRadioGraphyImages";
+            resources.ApplyResources(this.TTManageRadioGraphyImages, "TTManageRadioGraphyImages");
+            this.TTManageRadioGraphyImages.Click += new System.EventHandler(this.TTManageRadioGraphyImages_Click);
             // 
             // تعاریفToolStripMenuItem
             // 
@@ -120,6 +177,36 @@
             this.تعاریفToolStripMenuItem.Name = "تعاریفToolStripMenuItem";
             resources.ApplyResources(this.تعاریفToolStripMenuItem, "تعاریفToolStripMenuItem");
             // 
+            // BTNTTDeclareServices
+            // 
+            this.BTNTTDeclareServices.Image = global::DermaDent.Properties.Resources.checklist_icon;
+            this.BTNTTDeclareServices.Name = "BTNTTDeclareServices";
+            resources.ApplyResources(this.BTNTTDeclareServices, "BTNTTDeclareServices");
+            this.BTNTTDeclareServices.Click += new System.EventHandler(this.BTNTTDeclareServices_Click);
+            // 
+            // نیروهایتخصصیمرکزToolStripMenuItem
+            // 
+            resources.ApplyResources(this.نیروهایتخصصیمرکزToolStripMenuItem, "نیروهایتخصصیمرکزToolStripMenuItem");
+            this.نیروهایتخصصیمرکزToolStripMenuItem.Image = global::DermaDent.Properties.Resources.User_Group_icon;
+            this.نیروهایتخصصیمرکزToolStripMenuItem.Name = "نیروهایتخصصیمرکزToolStripMenuItem";
+            // 
+            // تعرفههایدرمانیToolStripMenuItem
+            // 
+            resources.ApplyResources(this.تعرفههایدرمانیToolStripMenuItem, "تعرفههایدرمانیToolStripMenuItem");
+            this.تعرفههایدرمانیToolStripMenuItem.Image = global::DermaDent.Properties.Resources.pricelist;
+            this.تعرفههایدرمانیToolStripMenuItem.Name = "تعرفههایدرمانیToolStripMenuItem";
+            // 
+            // روزشیفتهایکاریToolStripMenuItem
+            // 
+            resources.ApplyResources(this.روزشیفتهایکاریToolStripMenuItem, "روزشیفتهایکاریToolStripMenuItem");
+            this.روزشیفتهایکاریToolStripMenuItem.Name = "روزشیفتهایکاریToolStripMenuItem";
+            // 
+            // TTTimeDetails
+            // 
+            this.TTTimeDetails.Name = "TTTimeDetails";
+            resources.ApplyResources(this.TTTimeDetails, "TTTimeDetails");
+            this.TTTimeDetails.Click += new System.EventHandler(this.TTTimeDetails_Click);
+            // 
             // گزارشهاToolStripMenuItem
             // 
             this.گزارشهاToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -130,6 +217,31 @@
             this.LSTPatientLST});
             this.گزارشهاToolStripMenuItem.Name = "گزارشهاToolStripMenuItem";
             resources.ApplyResources(this.گزارشهاToolStripMenuItem, "گزارشهاToolStripMenuItem");
+            // 
+            // گزارشپرداختهایبیمارToolStripMenuItem
+            // 
+            this.گزارشپرداختهایبیمارToolStripMenuItem.Image = global::DermaDent.Properties.Resources.Cash_icon;
+            this.گزارشپرداختهایبیمارToolStripMenuItem.Name = "گزارشپرداختهایبیمارToolStripMenuItem";
+            resources.ApplyResources(this.گزارشپرداختهایبیمارToolStripMenuItem, "گزارشپرداختهایبیمارToolStripMenuItem");
+            // 
+            // گزارشکارکردپزشکانToolStripMenuItem
+            // 
+            this.گزارشکارکردپزشکانToolStripMenuItem.Image = global::DermaDent.Properties.Resources.cashier;
+            this.گزارشکارکردپزشکانToolStripMenuItem.Name = "گزارشکارکردپزشکانToolStripMenuItem";
+            resources.ApplyResources(this.گزارشکارکردپزشکانToolStripMenuItem, "گزارشکارکردپزشکانToolStripMenuItem");
+            // 
+            // گزارشصندقToolStripMenuItem
+            // 
+            resources.ApplyResources(this.گزارشصندقToolStripMenuItem, "گزارشصندقToolStripMenuItem");
+            this.گزارشصندقToolStripMenuItem.Image = global::DermaDent.Properties.Resources.cashier_icon;
+            this.گزارشصندقToolStripMenuItem.Name = "گزارشصندقToolStripMenuItem";
+            // 
+            // TTBTNPatientTimes
+            // 
+            this.TTBTNPatientTimes.Image = global::DermaDent.Properties.Resources.Health_care_shield_icon32;
+            this.TTBTNPatientTimes.Name = "TTBTNPatientTimes";
+            resources.ApplyResources(this.TTBTNPatientTimes, "TTBTNPatientTimes");
+            this.TTBTNPatientTimes.Click += new System.EventHandler(this.TTBTNPatientTimes_Click);
             // 
             // LSTPatientLST
             // 
@@ -157,6 +269,26 @@
             this.درخواستکمکToolStripMenuItem});
             this.دربارهنرمافزارToolStripMenuItem.Name = "دربارهنرمافزارToolStripMenuItem";
             resources.ApplyResources(this.دربارهنرمافزارToolStripMenuItem, "دربارهنرمافزارToolStripMenuItem");
+            // 
+            // BTNAboutUs
+            // 
+            this.BTNAboutUs.Image = global::DermaDent.Properties.Resources.Aboutus_icon;
+            this.BTNAboutUs.Name = "BTNAboutUs";
+            resources.ApplyResources(this.BTNAboutUs, "BTNAboutUs");
+            this.BTNAboutUs.Click += new System.EventHandler(this.AboutUs);
+            // 
+            // TTBTNErrorReport
+            // 
+            this.TTBTNErrorReport.Image = global::DermaDent.Properties.Resources.deleteerror_file_icon;
+            this.TTBTNErrorReport.Name = "TTBTNErrorReport";
+            resources.ApplyResources(this.TTBTNErrorReport, "TTBTNErrorReport");
+            this.TTBTNErrorReport.Click += new System.EventHandler(this.TTBTNErrorReport_Click);
+            // 
+            // درخواستکمکToolStripMenuItem
+            // 
+            this.درخواستکمکToolStripMenuItem.Image = global::DermaDent.Properties.Resources.help_icon;
+            this.درخواستکمکToolStripMenuItem.Name = "درخواستکمکToolStripMenuItem";
+            resources.ApplyResources(this.درخواستکمکToolStripMenuItem, "درخواستکمکToolStripMenuItem");
             // 
             // statusStrip1
             // 
@@ -190,18 +322,6 @@
             this.panel1.Controls.Add(this.BTNPanelExit);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
-            // UpdateStates
-            // 
-            this.UpdateStates.Enabled = true;
-            this.UpdateStates.Interval = 1000;
-            this.UpdateStates.Tick += new System.EventHandler(this.UpdateStates_Tick);
-            // 
-            // TTTimeDetails
-            // 
-            this.TTTimeDetails.Name = "TTTimeDetails";
-            resources.ApplyResources(this.TTTimeDetails, "TTTimeDetails");
-            this.TTTimeDetails.Click += new System.EventHandler(this.TTTimeDetails_Click);
             // 
             // BTNICReserveTime
             // 
@@ -262,129 +382,18 @@
             this.BTNPanelExit.UseVisualStyleBackColor = true;
             this.BTNPanelExit.Click += new System.EventHandler(this.BTNPanelExit_Click);
             // 
-            // TTBTNRegisterNewPatient
+            // UpdateStates
             // 
-            this.TTBTNRegisterNewPatient.Image = global::DermaDent.Properties.Resources.Healthcare_Clinic_icon;
-            this.TTBTNRegisterNewPatient.Name = "TTBTNRegisterNewPatient";
-            resources.ApplyResources(this.TTBTNRegisterNewPatient, "TTBTNRegisterNewPatient");
-            this.TTBTNRegisterNewPatient.Click += new System.EventHandler(this.RegisterNewPatient);
+            this.UpdateStates.Enabled = true;
+            this.UpdateStates.Interval = 1000;
+            this.UpdateStates.Tick += new System.EventHandler(this.UpdateStates_Tick);
             // 
-            // BTNTratmentAndDetect
+            // جستوجویسریعToolStripMenuItem
             // 
-            this.BTNTratmentAndDetect.Image = global::DermaDent.Properties.Resources.Doctor_icon;
-            this.BTNTratmentAndDetect.Name = "BTNTratmentAndDetect";
-            resources.ApplyResources(this.BTNTratmentAndDetect, "BTNTratmentAndDetect");
-            this.BTNTratmentAndDetect.Click += new System.EventHandler(this.BTNTratmentAndDetect_Click);
-            // 
-            // سیستموقتدهیبهبیمارToolStripMenuItem
-            // 
-            this.سیستموقتدهیبهبیمارToolStripMenuItem.Image = global::DermaDent.Properties.Resources.violetrectTime_Machine_icon;
-            this.سیستموقتدهیبهبیمارToolStripMenuItem.Name = "سیستموقتدهیبهبیمارToolStripMenuItem";
-            resources.ApplyResources(this.سیستموقتدهیبهبیمارToolStripMenuItem, "سیستموقتدهیبهبیمارToolStripMenuItem");
-            this.سیستموقتدهیبهبیمارToolStripMenuItem.Click += new System.EventHandler(this.سیستموقتدهیبهبیمارToolStripMenuItem_Click);
-            // 
-            // TTBTNTimeAllocatedPatient
-            // 
-            this.TTBTNTimeAllocatedPatient.Image = global::DermaDent.Properties.Resources.Apps_preferences_system_time_icon;
-            this.TTBTNTimeAllocatedPatient.Name = "TTBTNTimeAllocatedPatient";
-            resources.ApplyResources(this.TTBTNTimeAllocatedPatient, "TTBTNTimeAllocatedPatient");
-            this.TTBTNTimeAllocatedPatient.Click += new System.EventHandler(this.TTBTNTimeAllocatedPatient_Click);
-            // 
-            // TTBTNExit
-            // 
-            this.TTBTNExit.Image = global::DermaDent.Properties.Resources.Exit;
-            this.TTBTNExit.Name = "TTBTNExit";
-            resources.ApplyResources(this.TTBTNExit, "TTBTNExit");
-            this.TTBTNExit.Click += new System.EventHandler(this.TTBTNExit_Click);
-            // 
-            // TTBTnCashier
-            // 
-            this.TTBTnCashier.Image = global::DermaDent.Properties.Resources.pricelist;
-            this.TTBTnCashier.Name = "TTBTnCashier";
-            resources.ApplyResources(this.TTBTnCashier, "TTBTnCashier");
-            this.TTBTnCashier.Click += new System.EventHandler(this.TTBTnCashier_Click);
-            // 
-            // ثبتگزارشدرمانToolStripMenuItem
-            // 
-            this.ثبتگزارشدرمانToolStripMenuItem.Image = global::DermaDent.Properties.Resources.Reports_icon;
-            this.ثبتگزارشدرمانToolStripMenuItem.Name = "ثبتگزارشدرمانToolStripMenuItem";
-            resources.ApplyResources(this.ثبتگزارشدرمانToolStripMenuItem, "ثبتگزارشدرمانToolStripMenuItem");
-            // 
-            // TTManageRadioGraphyImages
-            // 
-            this.TTManageRadioGraphyImages.Image = global::DermaDent.Properties.Resources.skleton;
-            this.TTManageRadioGraphyImages.Name = "TTManageRadioGraphyImages";
-            resources.ApplyResources(this.TTManageRadioGraphyImages, "TTManageRadioGraphyImages");
-            this.TTManageRadioGraphyImages.Click += new System.EventHandler(this.TTManageRadioGraphyImages_Click);
-            // 
-            // BTNTTDeclareServices
-            // 
-            this.BTNTTDeclareServices.Image = global::DermaDent.Properties.Resources.checklist_icon;
-            this.BTNTTDeclareServices.Name = "BTNTTDeclareServices";
-            resources.ApplyResources(this.BTNTTDeclareServices, "BTNTTDeclareServices");
-            this.BTNTTDeclareServices.Click += new System.EventHandler(this.BTNTTDeclareServices_Click);
-            // 
-            // نیروهایتخصصیمرکزToolStripMenuItem
-            // 
-            resources.ApplyResources(this.نیروهایتخصصیمرکزToolStripMenuItem, "نیروهایتخصصیمرکزToolStripMenuItem");
-            this.نیروهایتخصصیمرکزToolStripMenuItem.Image = global::DermaDent.Properties.Resources.User_Group_icon;
-            this.نیروهایتخصصیمرکزToolStripMenuItem.Name = "نیروهایتخصصیمرکزToolStripMenuItem";
-            // 
-            // تعرفههایدرمانیToolStripMenuItem
-            // 
-            resources.ApplyResources(this.تعرفههایدرمانیToolStripMenuItem, "تعرفههایدرمانیToolStripMenuItem");
-            this.تعرفههایدرمانیToolStripMenuItem.Image = global::DermaDent.Properties.Resources.pricelist;
-            this.تعرفههایدرمانیToolStripMenuItem.Name = "تعرفههایدرمانیToolStripMenuItem";
-            // 
-            // روزشیفتهایکاریToolStripMenuItem
-            // 
-            resources.ApplyResources(this.روزشیفتهایکاریToolStripMenuItem, "روزشیفتهایکاریToolStripMenuItem");
-            this.روزشیفتهایکاریToolStripMenuItem.Name = "روزشیفتهایکاریToolStripMenuItem";
-            // 
-            // گزارشپرداختهایبیمارToolStripMenuItem
-            // 
-            this.گزارشپرداختهایبیمارToolStripMenuItem.Image = global::DermaDent.Properties.Resources.Cash_icon;
-            this.گزارشپرداختهایبیمارToolStripMenuItem.Name = "گزارشپرداختهایبیمارToolStripMenuItem";
-            resources.ApplyResources(this.گزارشپرداختهایبیمارToolStripMenuItem, "گزارشپرداختهایبیمارToolStripMenuItem");
-            // 
-            // گزارشکارکردپزشکانToolStripMenuItem
-            // 
-            this.گزارشکارکردپزشکانToolStripMenuItem.Image = global::DermaDent.Properties.Resources.cashier;
-            this.گزارشکارکردپزشکانToolStripMenuItem.Name = "گزارشکارکردپزشکانToolStripMenuItem";
-            resources.ApplyResources(this.گزارشکارکردپزشکانToolStripMenuItem, "گزارشکارکردپزشکانToolStripMenuItem");
-            // 
-            // گزارشصندقToolStripMenuItem
-            // 
-            resources.ApplyResources(this.گزارشصندقToolStripMenuItem, "گزارشصندقToolStripMenuItem");
-            this.گزارشصندقToolStripMenuItem.Image = global::DermaDent.Properties.Resources.cashier_icon;
-            this.گزارشصندقToolStripMenuItem.Name = "گزارشصندقToolStripMenuItem";
-            // 
-            // TTBTNPatientTimes
-            // 
-            this.TTBTNPatientTimes.Image = global::DermaDent.Properties.Resources.Health_care_shield_icon32;
-            this.TTBTNPatientTimes.Name = "TTBTNPatientTimes";
-            resources.ApplyResources(this.TTBTNPatientTimes, "TTBTNPatientTimes");
-            this.TTBTNPatientTimes.Click += new System.EventHandler(this.TTBTNPatientTimes_Click);
-            // 
-            // BTNAboutUs
-            // 
-            this.BTNAboutUs.Image = global::DermaDent.Properties.Resources.Aboutus_icon;
-            this.BTNAboutUs.Name = "BTNAboutUs";
-            resources.ApplyResources(this.BTNAboutUs, "BTNAboutUs");
-            this.BTNAboutUs.Click += new System.EventHandler(this.AboutUs);
-            // 
-            // TTBTNErrorReport
-            // 
-            this.TTBTNErrorReport.Image = global::DermaDent.Properties.Resources.deleteerror_file_icon;
-            this.TTBTNErrorReport.Name = "TTBTNErrorReport";
-            resources.ApplyResources(this.TTBTNErrorReport, "TTBTNErrorReport");
-            this.TTBTNErrorReport.Click += new System.EventHandler(this.TTBTNErrorReport_Click);
-            // 
-            // درخواستکمکToolStripMenuItem
-            // 
-            this.درخواستکمکToolStripMenuItem.Image = global::DermaDent.Properties.Resources.help_icon;
-            this.درخواستکمکToolStripMenuItem.Name = "درخواستکمکToolStripMenuItem";
-            resources.ApplyResources(this.درخواستکمکToolStripMenuItem, "درخواستکمکToolStripMenuItem");
+            this.جستوجویسریعToolStripMenuItem.Image = global::DermaDent.Properties.Resources._145;
+            this.جستوجویسریعToolStripMenuItem.Name = "جستوجویسریعToolStripMenuItem";
+            resources.ApplyResources(this.جستوجویسریعToolStripMenuItem, "جستوجویسریعToolStripMenuItem");
+            this.جستوجویسریعToolStripMenuItem.Click += new System.EventHandler(this.QuickSearchForm);
             // 
             // FRMHomePage
             // 
@@ -451,5 +460,6 @@
         private System.Windows.Forms.Timer UpdateStates;
         private System.Windows.Forms.ToolStripMenuItem LSTPatientLST;
         private System.Windows.Forms.ToolStripMenuItem TTTimeDetails;
+        private System.Windows.Forms.ToolStripMenuItem جستوجویسریعToolStripMenuItem;
     }
 }

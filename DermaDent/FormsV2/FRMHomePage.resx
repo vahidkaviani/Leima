@@ -161,22 +161,28 @@
     <value>ورود و ویرایش</value>
   </data>
   <data name="TTBTnCashier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="TTBTnCashier.Text" xml:space="preserve">
     <value>صندق</value>
   </data>
   <data name="ثبتگزارشدرمانToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="ثبتگزارشدرمانToolStripMenuItem.Text" xml:space="preserve">
     <value>ثبت گزارش درمان</value>
   </data>
   <data name="TTManageRadioGraphyImages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="TTManageRadioGraphyImages.Text" xml:space="preserve">
     <value>تصاویر رادیوگرافی</value>
+  </data>
+  <data name="جستوجویسریعToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="جستوجویسریعToolStripMenuItem.Text" xml:space="preserve">
+    <value>جست و جوی سریع</value>
   </data>
   <data name="عملیاتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 20</value>
@@ -1785,9 +1791,6 @@
         /wD6fCGAqVM+qQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
@@ -1798,72 +1801,6 @@
     <value>ورودوویرایشToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ورودوویرایشToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;عملیاتToolStripMenuItem.Name" xml:space="preserve">
-    <value>عملیاتToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;عملیاتToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;تعاریفToolStripMenuItem.Name" xml:space="preserve">
-    <value>تعاریفToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;تعاریفToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;گزارشهاToolStripMenuItem.Name" xml:space="preserve">
-    <value>گزارشهاToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;گزارشهاToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LSTPatientLST.Name" xml:space="preserve">
-    <value>LSTPatientLST</value>
-  </data>
-  <data name="&gt;&gt;LSTPatientLST.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;امکاناتToolStripMenuItem.Name" xml:space="preserve">
-    <value>امکاناتToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;امکاناتToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;مدیریتتصاویررادیوگرافیToolStripMenuItem.Name" xml:space="preserve">
-    <value>مدیریتتصاویررادیوگرافیToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;مدیریتتصاویررادیوگرافیToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;دربارهنرمافزارToolStripMenuItem.Name" xml:space="preserve">
-    <value>دربارهنرمافزارToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;دربارهنرمافزارToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LBLUserName.Name" xml:space="preserve">
-    <value>LBLUserName</value>
-  </data>
-  <data name="&gt;&gt;LBLUserName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LBLTTTodayDateTime.Name" xml:space="preserve">
-    <value>LBLTTTodayDateTime</value>
-  </data>
-  <data name="&gt;&gt;LBLTTTodayDateTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;UpdateStates.Name" xml:space="preserve">
-    <value>UpdateStates</value>
-  </data>
-  <data name="&gt;&gt;UpdateStates.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TTTimeDetails.Name" xml:space="preserve">
-    <value>TTTimeDetails</value>
-  </data>
-  <data name="&gt;&gt;TTTimeDetails.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TTBTNRegisterNewPatient.Name" xml:space="preserve">
@@ -1896,6 +1833,12 @@
   <data name="&gt;&gt;TTBTNExit.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;عملیاتToolStripMenuItem.Name" xml:space="preserve">
+    <value>عملیاتToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;عملیاتToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;TTBTnCashier.Name" xml:space="preserve">
     <value>TTBTnCashier</value>
   </data>
@@ -1912,6 +1855,12 @@
     <value>TTManageRadioGraphyImages</value>
   </data>
   <data name="&gt;&gt;TTManageRadioGraphyImages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;تعاریفToolStripMenuItem.Name" xml:space="preserve">
+    <value>تعاریفToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;تعاریفToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BTNTTDeclareServices.Name" xml:space="preserve">
@@ -1938,6 +1887,18 @@
   <data name="&gt;&gt;روزشیفتهایکاریToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;TTTimeDetails.Name" xml:space="preserve">
+    <value>TTTimeDetails</value>
+  </data>
+  <data name="&gt;&gt;TTTimeDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;گزارشهاToolStripMenuItem.Name" xml:space="preserve">
+    <value>گزارشهاToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;گزارشهاToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;گزارشپرداختهایبیمارToolStripMenuItem.Name" xml:space="preserve">
     <value>گزارشپرداختهایبیمارToolStripMenuItem</value>
   </data>
@@ -1962,6 +1923,30 @@
   <data name="&gt;&gt;TTBTNPatientTimes.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;LSTPatientLST.Name" xml:space="preserve">
+    <value>LSTPatientLST</value>
+  </data>
+  <data name="&gt;&gt;LSTPatientLST.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;امکاناتToolStripMenuItem.Name" xml:space="preserve">
+    <value>امکاناتToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;امکاناتToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;مدیریتتصاویررادیوگرافیToolStripMenuItem.Name" xml:space="preserve">
+    <value>مدیریتتصاویررادیوگرافیToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;مدیریتتصاویررادیوگرافیToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;دربارهنرمافزارToolStripMenuItem.Name" xml:space="preserve">
+    <value>دربارهنرمافزارToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;دربارهنرمافزارToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;BTNAboutUs.Name" xml:space="preserve">
     <value>BTNAboutUs</value>
   </data>
@@ -1978,6 +1963,30 @@
     <value>درخواستکمکToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;درخواستکمکToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LBLUserName.Name" xml:space="preserve">
+    <value>LBLUserName</value>
+  </data>
+  <data name="&gt;&gt;LBLUserName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LBLTTTodayDateTime.Name" xml:space="preserve">
+    <value>LBLTTTodayDateTime</value>
+  </data>
+  <data name="&gt;&gt;LBLTTTodayDateTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UpdateStates.Name" xml:space="preserve">
+    <value>UpdateStates</value>
+  </data>
+  <data name="&gt;&gt;UpdateStates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;جستوجویسریعToolStripMenuItem.Name" xml:space="preserve">
+    <value>جستوجویسریعToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;جستوجویسریعToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

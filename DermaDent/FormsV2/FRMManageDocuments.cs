@@ -23,7 +23,7 @@ namespace DermaDent.FormsV2
             SaveToFileAddress.Text = Settings.Default.PatientDocumentSavePath;
             DefaultPatientdocument();
             InitImageViewer();
-
+            DocumentList.AutoGenerateColumns = false;
             LSTVUPatientDocumentList.DragDrop += new DragEventHandler(FileDragEventArgsHandler);
 
             LSTVUPatientDocumentList.DragOver += new DragEventHandler(textBoxFile_DragOver);
@@ -225,7 +225,7 @@ namespace DermaDent.FormsV2
         public void DefaultPatientQue()
         {
  
-            searchPatintProfile();
+            searchPatintProfileDoc();
         }
         public void DefaultPatientdocument()
         {
@@ -245,11 +245,11 @@ namespace DermaDent.FormsV2
                 return;
             int n;
             bool isNumeric = int.TryParse(((TextBox)sender).Text, out n);
-            if (isNumeric)
-                return;
+            if (isNumeric&&((TextBox)sender).Text.Trim().Length > 3)
+                searchPatintProfileDoc(null, ((TextBox)sender).Text);
             if (!isNumeric)
             {
-                searchPatintProfile(((TextBox)sender).Text, null);
+                searchPatintProfileDoc(((TextBox)sender).Text, null);
             }
         }
 
@@ -307,7 +307,7 @@ namespace DermaDent.FormsV2
                                     ,[Birthday]
                                     ,[Tel]
                                     FROM [InfoSick]" +
-                                        string.Format("WHERE {0} LIKE N'%{1}%'", "LNamesick", LName) +
+                                        string.Format("WHERE {0} LIKE '%{1}%'", "LNamesick", LName) +
                                     "ORDER BY date_create DESC ");
                 DocumentList.DataSource = result;
             }

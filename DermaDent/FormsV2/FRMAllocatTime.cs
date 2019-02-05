@@ -229,6 +229,36 @@ namespace DermaDent
             }
             return true;
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            bool bHandled = false;
+            // switch case is the easy way, a hash or map would be better, 
+            // but more work to get set up.
+            switch (keyData)
+            {
+                case Keys.F3:
+                    ShowSearchBar();
+                    bHandled = true;
+                    break;
+                case Keys.F6:
+                    bHandled = true;
+                    break;
+                case Keys.F5:
+                    bHandled = true;
+                    break;
+                case Keys.F4:
+                    bHandled = true;
+                    break;
+            }
+            return bHandled;
+        }
+
+        void ShowSearchBar()
+        {
+            FRMSearchPatient FSP = new FRMSearchPatient();
+            FSP.MdiParent = this.ParentForm;
+            FSP.Show();
+        }
         private void BTNSearchPatient_Click(object sender, EventArgs e)
         {
             FRMSearchPatient FSP = new FRMSearchPatient();
@@ -289,8 +319,8 @@ namespace DermaDent
                     //m.MenuItems.Add("غیبت", PatientAbsentclick);
                     m.MenuItems.Add("افزودن نوبت", createNewVisitTime);
                     m.MenuItems.Add("کنسل بیمار", PatientCancelClick);
-                    //m.MenuItems.Add("انتقال / بریدن", ReAllocateTime);
-                    //m.MenuItems.Add("چسباندن ", ReAllocateTime);
+                    m.MenuItems.Add("بریدن", ReAllocateTime);
+                    m.MenuItems.Add("چسباندن", ReAllocateTime);
                     m.MenuItems.Add("کنسل پزشک", DoctorCancelclick);
                     m.MenuItems.Add("حذف", RemoveTimeclick);
                     m.Show(DTGVReservedTimeList, new Point(e.X, e.Y));
@@ -317,12 +347,25 @@ namespace DermaDent
             }
             updateTimeLists(true, -1, false);
         }
-
+        public static string ClipBoardID = "-1";
         private void ReAllocateTime(object sender, EventArgs e)
         {
-            string name = (string)DTGVReservedTimeList.Rows[SelectedItemListview].Cells["PatientFirstName"].Value + " " + (string)DTGVReservedTimeList.Rows[SelectedItemListview].Cells["PatientLastName"].Value;
-            string message = string.Format("{0} {1} {2} {3} {4} {5} {6}", "آبا می خواهید نوبت ", name, "به ساعت", maskedTextBox1.Text, "مورخ", persianDateTimeBox1.Text, "منتقل شود؟");
-            MessageBox.Show(message, "توجه", MessageBoxButtons.YesNo);
+            System.Windows.Forms.MenuItem menu = (System.Windows.Forms.MenuItem)sender;
+            if (menu.Text == "بریدن")
+            {
+                ClipBoardID = DTGVReservedTimeList.Rows[SelectedItemListview].Cells["pid"].Value.ToString();
+                RemoveTimeclick(null, null);
+            }
+            else if (menu.Text == "چسباندن")
+            {
+                RemoveTimeclick(null, null);
+                string PatientID = ClipBoardID;
+                Transaction.EditVisitTimeState((DTGVReservedTimeList.Rows[SelectedItemListview].Cells["QueueNo"].Value).ToString(), PatientID: PatientID, status: "1");
+            }
+            updateTimeLists();
+                //string name = (string)DTGVReservedTimeList.Rows[SelectedItemListview].Cells["PatientFirstName"].Value + " " + (string)DTGVReservedTimeList.Rows[SelectedItemListview].Cells["PatientLastName"].Value;
+                //string message = string.Format("{0} {1} {2} {3} {4} {5} {6}", "آبا می خواهید نوبت ", name, "به ساعت", maskedTextBox1.Text, "مورخ", persianDateTimeBox1.Text, "منتقل شود؟");
+                //MessageBox.Show(message, "توجه", MessageBoxButtons.YesNo);
         }
 
         private void PatientCancelClick(object sender, EventArgs e)

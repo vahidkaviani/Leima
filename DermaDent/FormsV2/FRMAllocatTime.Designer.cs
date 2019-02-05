@@ -426,7 +426,7 @@
             // 
             // sendsms
             // 
-            this.sendsms.DataPropertyName = "sendsms";
+            this.sendsms.DataPropertyName = "SendMessage";
             this.sendsms.HeaderText = "ارسال sms";
             this.sendsms.Name = "sendsms";
             this.sendsms.ReadOnly = true;
@@ -525,6 +525,7 @@
             // 
             this.doctorNameComboBox1.DataSource = ((object)(resources.GetObject("doctorNameComboBox1.DataSource")));
             this.doctorNameComboBox1.FormattingEnabled = true;
+  
             this.doctorNameComboBox1.Location = new System.Drawing.Point(42, 121);
             this.doctorNameComboBox1.Name = "doctorNameComboBox1";
             this.doctorNameComboBox1.Size = new System.Drawing.Size(180, 21);

@@ -83,7 +83,8 @@ namespace DermaDent
                 if (res.Rows.Count > 0)
                 {
                     int drid = (int)res.Rows[0]["DoctorID"];
-                    doctorNameComboBox.SelectedIndex =drid-1;
+                    if (doctorNameComboBox.Items.Count > drid)
+                        doctorNameComboBox.SelectedIndex = drid - 1;
                     var dd = Transaction.GetDoctorDetails(drid);
                     int proindex = (int)(decimal)dd.Rows[0]["id_typeSpecial"];
                     profeciencyCombobox1.SelectedIndex = proindex- 1;

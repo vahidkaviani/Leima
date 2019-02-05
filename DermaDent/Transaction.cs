@@ -116,7 +116,8 @@ namespace DermaDent
                                                 ,string PatientID=null
                                                 ,int status=-1
                                                 ,string PFirstName=null
-                                                ,string PLastName = null)
+                                                ,string PLastName = null
+                                                ,bool OnlyAllocated=false)
         {
 
             //if (From < DateTime.Now)
@@ -126,6 +127,7 @@ namespace DermaDent
                                                         ,test.LNamedentist 
                                                         ,test.DoctorID*/
                                                         string.Format(@"SELECT id,convert(char(5),TimeToVisit ,108) [time],PatientID,FNamesick,LNamesick,ServiceName,TelQuick,InfoSick.Tel,ToothNo,PersianDate AS Tarikh,FNameDentist+' '+LNameDentist AS Dentist,Status,FNamesick+' '+LNamesick AS Patient
+                                                        ,SendMessage
                                                         FROM VisitTime
                                                         JOIN InfoSick
                                                         ON PatientID=IDsick
@@ -150,6 +152,9 @@ namespace DermaDent
 
             if (!string.IsNullOrEmpty(PLastName))
                 Query += " AND LNameSick LIKE '%" + PLastName+ "%'";
+
+            if (OnlyAllocated)
+                Query += " AND PatientID != '0'";
 
             Query += " ORDER BY PersianDate,TimeToVisit";
 

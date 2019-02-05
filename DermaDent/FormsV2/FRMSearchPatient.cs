@@ -59,5 +59,15 @@ namespace DermaDent.FormsV2
             catch
             { }
         }
+        private void TXTBXLastName_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(TXTBXLastName.Text))
+                UpdateTable();
+            if (string.IsNullOrEmpty(TXTBXLastName.Text))
+                return;
+            if (TXTBXLastName.Text.Trim().Length > 2)
+                UpdateTable();
+            
+        }
     }
 }

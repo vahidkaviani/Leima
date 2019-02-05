@@ -149,5 +149,40 @@ namespace DermaDent
             frmt.MdiParent = this;
             frmt.Show();
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            bool bHandled = false;
+            // switch case is the easy way, a hash or map would be better, 
+            // but more work to get set up.
+            switch (keyData)
+            {
+                case Keys.F3:
+                    ShowSearchBar();
+                    bHandled = true;
+                    break;
+                case Keys.F6:
+                    bHandled = true;
+                    break;
+                case Keys.F5:
+                    bHandled = true;
+                    break;
+                case Keys.F4:
+                    bHandled = true;
+                    break;
+            }
+            return bHandled;
+        }
+
+        void ShowSearchBar()
+        {
+            FRMSearchPatient FSP = new FRMSearchPatient();
+            FSP.MdiParent = this.ParentForm;
+            FSP.Show();
+        }
+        private void QuickSearchForm(object sender, EventArgs e)
+        {
+            FRMSearchPatient FSP = new FRMSearchPatient();
+            FSP.ShowDialog();
+        }
     }
 }

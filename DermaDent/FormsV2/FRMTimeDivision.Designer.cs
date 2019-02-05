@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMTimeDivision));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -111,20 +112,21 @@
             this.TXBXTimeIntervals.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TXBXTimeIntervals.Size = new System.Drawing.Size(40, 21);
             this.TXBXTimeIntervals.TabIndex = 4;
+            this.TXBXTimeIntervals.Text = "0000";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(189, 115);
+            this.label5.Location = new System.Drawing.Point(152, 114);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "دقیقه";
+            this.label5.Text = "(دقیقه:ساعت)";
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(96, 113);
+            this.radioButton2.Location = new System.Drawing.Point(55, 113);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(81, 17);
             this.radioButton2.TabIndex = 3;
@@ -134,7 +136,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(53, 111);
+            this.textBox5.Location = new System.Drawing.Point(12, 111);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(34, 21);
             this.textBox5.TabIndex = 6;
@@ -282,6 +284,7 @@
             // 
             // doctorNameComboBox1
             // 
+            this.doctorNameComboBox1.DataSource = ((object)(resources.GetObject("doctorNameComboBox1.DataSource")));
             this.doctorNameComboBox1.FormattingEnabled = true;
             this.doctorNameComboBox1.Location = new System.Drawing.Point(12, 151);
             this.doctorNameComboBox1.Name = "doctorNameComboBox1";

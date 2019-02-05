@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMReserverdTime));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.doctorNameComboBox1 = new DermaDent.DoctorNameComboBox();
             this.BTNICRegisterServices = new DermaDent.IconnedButton();
-            this.iconnedButton4 = new DermaDent.IconnedButton();
+            this.BTNShowTimes = new DermaDent.IconnedButton();
             this.iconnedButton3 = new DermaDent.IconnedButton();
             this.BTNICExit = new DermaDent.IconnedButton();
             this.iconnedButton1 = new DermaDent.IconnedButton();
@@ -403,8 +403,8 @@
             // 
             // Column7
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column7.HeaderText = "9";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
@@ -608,6 +608,7 @@
             // 
             // doctorNameComboBox1
             // 
+            this.doctorNameComboBox1.DataSource = ((object)(resources.GetObject("doctorNameComboBox1.DataSource")));
             this.doctorNameComboBox1.FormattingEnabled = true;
             this.doctorNameComboBox1.Location = new System.Drawing.Point(653, 114);
             this.doctorNameComboBox1.Name = "doctorNameComboBox1";
@@ -627,17 +628,18 @@
             this.BTNICRegisterServices.UseVisualStyleBackColor = true;
             this.BTNICRegisterServices.Click += new System.EventHandler(this.BTNICRegisterServices_Click);
             // 
-            // iconnedButton4
+            // BTNShowTimes
             // 
-            this.iconnedButton4.Image = global::DermaDent.Properties.Resources.Clipboard;
-            this.iconnedButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconnedButton4.Location = new System.Drawing.Point(496, 4);
-            this.iconnedButton4.Name = "iconnedButton4";
-            this.iconnedButton4.Size = new System.Drawing.Size(126, 32);
-            this.iconnedButton4.TabIndex = 12;
-            this.iconnedButton4.Text = "مشاهده وقتها";
-            this.iconnedButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconnedButton4.UseVisualStyleBackColor = true;
+            this.BTNShowTimes.Image = global::DermaDent.Properties.Resources.Clipboard;
+            this.BTNShowTimes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTNShowTimes.Location = new System.Drawing.Point(496, 4);
+            this.BTNShowTimes.Name = "BTNShowTimes";
+            this.BTNShowTimes.Size = new System.Drawing.Size(126, 32);
+            this.BTNShowTimes.TabIndex = 12;
+            this.BTNShowTimes.Text = "مشاهده وقتها";
+            this.BTNShowTimes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTNShowTimes.UseVisualStyleBackColor = true;
+            this.BTNShowTimes.Click += new System.EventHandler(this.BTNShowTimes_Click);
             // 
             // iconnedButton3
             // 
@@ -683,7 +685,7 @@
             this.ClientSize = new System.Drawing.Size(910, 745);
             this.Controls.Add(this.doctorNameComboBox1);
             this.Controls.Add(this.BTNICRegisterServices);
-            this.Controls.Add(this.iconnedButton4);
+            this.Controls.Add(this.BTNShowTimes);
             this.Controls.Add(this.iconnedButton3);
             this.Controls.Add(this.BTNICExit);
             this.Controls.Add(this.iconnedButton1);
@@ -761,7 +763,7 @@
         private IconnedButton iconnedButton1;
         private IconnedButton BTNICExit;
         private IconnedButton iconnedButton3;
-        private IconnedButton iconnedButton4;
+        private IconnedButton BTNShowTimes;
         private IconnedButton BTNICRegisterServices;
         private System.Windows.Forms.Button button7;
         private DoctorNameComboBox doctorNameComboBox1;

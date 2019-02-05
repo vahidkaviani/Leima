@@ -110,7 +110,7 @@
             this.OwnerGroupbox.Size = new System.Drawing.Size(319, 82);
             this.OwnerGroupbox.TabIndex = 14;
             this.OwnerGroupbox.TabStop = false;
-            this.OwnerGroupbox.Text = "Owner";
+            this.OwnerGroupbox.Text = "پرونده";
             // 
             // label12
             // 

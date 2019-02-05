@@ -6,3 +6,12 @@ E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.Properties.Resources.
 E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.csproj.GenerateResource.Cache
 E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.exe
 E:\Private\den\Solident_1397.11.06\dbTool\obj\Debug\dbTool.pdb
+E:\Private\dowranset\Leima\dbTool\bin\Debug\dbTool.exe.config
+E:\Private\dowranset\Leima\dbTool\bin\Debug\dbTool.exe
+E:\Private\dowranset\Leima\dbTool\bin\Debug\dbTool.pdb
+E:\Private\dowranset\Leima\dbTool\obj\Debug\dbTool.csprojResolveAssemblyReference.cache
+E:\Private\dowranset\Leima\dbTool\obj\Debug\dbTool.Form1.resources
+E:\Private\dowranset\Leima\dbTool\obj\Debug\dbTool.Properties.Resources.resources
+E:\Private\dowranset\Leima\dbTool\obj\Debug\dbTool.csproj.GenerateResource.Cache
+E:\Private\dowranset\Leima\dbTool\obj\Debug\dbTool.exe
+E:\Private\dowranset\Leima\dbTool\obj\Debug\dbTool.pdb

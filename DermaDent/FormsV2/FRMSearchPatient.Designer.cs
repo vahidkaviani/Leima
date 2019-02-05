@@ -112,7 +112,7 @@
             this.DGVPatientList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVPatientList.ShowEditingIcon = false;
             this.DGVPatientList.Size = new System.Drawing.Size(659, 303);
-            this.DGVPatientList.TabIndex = 10;
+            this.DGVPatientList.TabIndex = 6;
             this.DGVPatientList.DoubleClick += new System.EventHandler(this.SelectPatient);
             // 
             // PatientID
@@ -143,7 +143,7 @@
             // Tel
             // 
             this.Tel.DataPropertyName = "Tel";
-            this.Tel.HeaderText = "تلفن";
+            this.Tel.HeaderText = "تلفن ثابت";
             this.Tel.Name = "Tel";
             this.Tel.ReadOnly = true;
             this.Tel.Width = 80;
@@ -184,7 +184,8 @@
             this.TXTBXLastName.Location = new System.Drawing.Point(91, 6);
             this.TXTBXLastName.Name = "TXTBXLastName";
             this.TXTBXLastName.Size = new System.Drawing.Size(100, 21);
-            this.TXTBXLastName.TabIndex = 11;
+            this.TXTBXLastName.TabIndex = 0;
+            this.TXTBXLastName.TextChanged += new System.EventHandler(this.TXTBXLastName_TextChanged);
             this.TXTBXLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UpdatePatientList);
             // 
             // TXTBXFirstName
@@ -192,7 +193,7 @@
             this.TXTBXFirstName.Location = new System.Drawing.Point(90, 33);
             this.TXTBXFirstName.Name = "TXTBXFirstName";
             this.TXTBXFirstName.Size = new System.Drawing.Size(100, 21);
-            this.TXTBXFirstName.TabIndex = 11;
+            this.TXTBXFirstName.TabIndex = 1;
             this.TXTBXFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UpdatePatientList);
             // 
             // TXTBXFileID
@@ -200,7 +201,7 @@
             this.TXTBXFileID.Location = new System.Drawing.Point(309, 6);
             this.TXTBXFileID.Name = "TXTBXFileID";
             this.TXTBXFileID.Size = new System.Drawing.Size(100, 21);
-            this.TXTBXFileID.TabIndex = 11;
+            this.TXTBXFileID.TabIndex = 2;
             this.TXTBXFileID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UpdatePatientList);
             // 
             // TXTBXNationID
@@ -208,7 +209,7 @@
             this.TXTBXNationID.Location = new System.Drawing.Point(309, 33);
             this.TXTBXNationID.Name = "TXTBXNationID";
             this.TXTBXNationID.Size = new System.Drawing.Size(100, 21);
-            this.TXTBXNationID.TabIndex = 11;
+            this.TXTBXNationID.TabIndex = 3;
             this.TXTBXNationID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UpdatePatientList);
             // 
             // BTNCancell
@@ -218,7 +219,7 @@
             this.BTNCancell.Location = new System.Drawing.Point(557, 37);
             this.BTNCancell.Name = "BTNCancell";
             this.BTNCancell.Size = new System.Drawing.Size(85, 32);
-            this.BTNCancell.TabIndex = 12;
+            this.BTNCancell.TabIndex = 5;
             this.BTNCancell.Text = "لغو";
             this.BTNCancell.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTNCancell.UseVisualStyleBackColor = true;
@@ -231,7 +232,7 @@
             this.BTNSelect.Location = new System.Drawing.Point(557, 2);
             this.BTNSelect.Name = "BTNSelect";
             this.BTNSelect.Size = new System.Drawing.Size(85, 32);
-            this.BTNSelect.TabIndex = 12;
+            this.BTNSelect.TabIndex = 4;
             this.BTNSelect.Text = "انتخاب";
             this.BTNSelect.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTNSelect.UseVisualStyleBackColor = true;
