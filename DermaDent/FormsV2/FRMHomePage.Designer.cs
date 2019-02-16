@@ -41,6 +41,7 @@
             this.TTBTnCashier = new System.Windows.Forms.ToolStripMenuItem();
             this.ثبتگزارشدرمانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TTManageRadioGraphyImages = new System.Windows.Forms.ToolStripMenuItem();
+            this.جستوجویسریعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تعاریفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTNTTDeclareServices = new System.Windows.Forms.ToolStripMenuItem();
             this.نیروهایتخصصیمرکزToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +73,6 @@
             this.BTNPanelInfo = new DermaDent.IconnedButton();
             this.BTNPanelExit = new DermaDent.IconnedButton();
             this.UpdateStates = new System.Windows.Forms.Timer(this.components);
-            this.جستوجویسریعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -165,6 +165,13 @@
             this.TTManageRadioGraphyImages.Name = "TTManageRadioGraphyImages";
             resources.ApplyResources(this.TTManageRadioGraphyImages, "TTManageRadioGraphyImages");
             this.TTManageRadioGraphyImages.Click += new System.EventHandler(this.TTManageRadioGraphyImages_Click);
+            // 
+            // جستوجویسریعToolStripMenuItem
+            // 
+            this.جستوجویسریعToolStripMenuItem.Image = global::DermaDent.Properties.Resources._145;
+            this.جستوجویسریعToolStripMenuItem.Name = "جستوجویسریعToolStripMenuItem";
+            resources.ApplyResources(this.جستوجویسریعToolStripMenuItem, "جستوجویسریعToolStripMenuItem");
+            this.جستوجویسریعToolStripMenuItem.Click += new System.EventHandler(this.QuickSearchForm);
             // 
             // تعاریفToolStripMenuItem
             // 
@@ -387,13 +394,6 @@
             this.UpdateStates.Enabled = true;
             this.UpdateStates.Interval = 1000;
             this.UpdateStates.Tick += new System.EventHandler(this.UpdateStates_Tick);
-            // 
-            // جستوجویسریعToolStripMenuItem
-            // 
-            this.جستوجویسریعToolStripMenuItem.Image = global::DermaDent.Properties.Resources._145;
-            this.جستوجویسریعToolStripMenuItem.Name = "جستوجویسریعToolStripMenuItem";
-            resources.ApplyResources(this.جستوجویسریعToolStripMenuItem, "جستوجویسریعToolStripMenuItem");
-            this.جستوجویسریعToolStripMenuItem.Click += new System.EventHandler(this.QuickSearchForm);
             // 
             // FRMHomePage
             // 

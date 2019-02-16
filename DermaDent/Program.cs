@@ -33,7 +33,9 @@ namespace DermaDent
 
 
 #if DEBUG
+                Application.Run(new FRMDeclareServices());
                 FRMAuthentication frm = new FRMAuthentication();
+                return;
                 if (frm.ShowDialog() != DialogResult.OK)
                     return;
                 Application.Run(new FRMHomePage(frm.SU_));

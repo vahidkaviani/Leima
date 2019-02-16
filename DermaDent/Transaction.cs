@@ -77,9 +77,25 @@ namespace DermaDent
             return true;//if the time has no conflict
         }
 
-        public static DataTable GetServicesListAndInfo()
+        internal static void EditService(int servicecode, string serviceName, string latinaName, string desc, int subGroup, int insuranceServiceType, int centerId)
         {
-            string Query = string.Format(@"SELECT * FROM infoService");
+            string Query = string.Format(@"UPDATE infoService SET IDSub='{0}',NameService='{1}',nameservice_latin='{2}',NodePtr='{3}',CodeSend='{4}',CenterID='{5}' WHERE IDService='{6}'",
+                                            subGroup, serviceName, latinaName, desc, insuranceServiceType, centerId, servicecode);
+                                            
+        }
+
+        public static void CreateNewService(int servicecode, string serviceName, string latinaName, string desc, int subGroup, int insuranceServiceType, int CenterID)
+        {
+            string Query = string.Format(@"INSERT INTO infoService(IDService,IDSub,NameService,nameservice_latin,NodePtr,CodeSend,CenterID) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')"
+                                        , servicecode, subGroup, serviceName, latinaName, desc, insuranceServiceType,CenterID);
+            new DatabaseManager().SaveData(Query);
+        }
+
+        public static DataTable GetServicesListAndInfo(int?  ServiceId)
+        {
+            string Query = string.Format(@"SELECT * FROM infoService WHERE 1=1");
+            if (ServiceId.HasValue)
+                Query = string.Format("{0} AND IDService = '{1}' ", Query, ServiceId.Value);
             return new DatabaseManager().GetData(Query);
         }
 

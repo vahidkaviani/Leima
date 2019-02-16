@@ -712,7 +712,6 @@ E:\Private\dowranset\Leima\DermaDent\obj\Release\DermaDent.csproj.GenerateResour
 E:\Private\dowranset\Leima\DermaDent\obj\Release\fa-IR\Solident.resources.dll
 E:\Private\dowranset\Leima\DermaDent\obj\Release\Solident.exe
 E:\Private\dowranset\Leima\DermaDent\obj\Release\Solident.pdb
-E:\Private\dowranset\Leima\DermaDent\obj\Release\DermaDent.csprojResolveAssemblyReference.cache
 D:\Projects\Dental\Leima\DermaDent\bin\Release\Solident.exe.config
 D:\Projects\Dental\Leima\DermaDent\obj\Release\Solident.exe
 D:\Projects\Dental\Leima\DermaDent\obj\Release\Solident.pdb
@@ -776,3 +775,4 @@ D:\Projects\Dental\Leima\DermaDent\obj\Release\DermaDent.FRMUserProfileList.reso
 D:\Projects\Dental\Leima\DermaDent\obj\Release\DermaDent.FRMHomePage.fa-IR.resources
 D:\Projects\Dental\Leima\DermaDent\obj\Release\DermaDent.csproj.GenerateResource.Cache
 D:\Projects\Dental\Leima\DermaDent\obj\Release\fa-IR\Solident.resources.dll
+E:\Private\dowranset\Leima\DermaDent\obj\Release\DermaDent.csprojResolveAssemblyReference.cache

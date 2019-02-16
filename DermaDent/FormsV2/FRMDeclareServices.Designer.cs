@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMDeclareServices));
             this.DTGServices = new System.Windows.Forms.DataGridView();
-            this.ServiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ServiceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Info = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameEnglish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RDBTNEdit = new System.Windows.Forms.RadioButton();
             this.RDBRNNew = new System.Windows.Forms.RadioButton();
             this.TXTBXEditCode = new System.Windows.Forms.TextBox();
@@ -42,14 +38,21 @@
             this.BTNICRegister = new DermaDent.IconnedButton();
             this.CMBBXServiceInsuranceType = new DermaDent.InsuranceServicesType();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TXBXDescription = new System.Windows.Forms.TextBox();
+            this.TXBXServiceName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TXTBXNewCode = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TXBXLatinName = new System.Windows.Forms.TextBox();
+            this.ServiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameEnglish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SuperGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DTGServices)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -57,12 +60,14 @@
             // DTGServices
             // 
             this.DTGServices.AllowUserToDeleteRows = false;
+            this.DTGServices.AllowUserToResizeRows = false;
             this.DTGServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DTGServices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ServiceID,
             this.ServiceName,
             this.Info,
-            this.NameEnglish});
+            this.NameEnglish,
+            this.SuperGroup});
             this.DTGServices.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.DTGServices.Location = new System.Drawing.Point(0, 140);
             this.DTGServices.MultiSelect = false;
@@ -75,37 +80,6 @@
             this.DTGServices.Size = new System.Drawing.Size(1008, 522);
             this.DTGServices.TabIndex = 0;
             this.DTGServices.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ManageContextMenu);
-            // 
-            // ServiceID
-            // 
-            this.ServiceID.DataPropertyName = "IDService";
-            this.ServiceID.HeaderText = "کد خدمت";
-            this.ServiceID.Name = "ServiceID";
-            this.ServiceID.ReadOnly = true;
-            this.ServiceID.Width = 60;
-            // 
-            // ServiceName
-            // 
-            this.ServiceName.DataPropertyName = "NameService";
-            this.ServiceName.HeaderText = "نام خدمت";
-            this.ServiceName.Name = "ServiceName";
-            this.ServiceName.ReadOnly = true;
-            this.ServiceName.Width = 250;
-            // 
-            // Info
-            // 
-            this.Info.HeaderText = "توضیحات";
-            this.Info.Name = "Info";
-            this.Info.ReadOnly = true;
-            this.Info.Width = 400;
-            // 
-            // NameEnglish
-            // 
-            this.NameEnglish.DataPropertyName = "nameservice_latin";
-            this.NameEnglish.HeaderText = "نام لاتین خدمت";
-            this.NameEnglish.Name = "NameEnglish";
-            this.NameEnglish.ReadOnly = true;
-            this.NameEnglish.Width = 150;
             // 
             // RDBTNEdit
             // 
@@ -142,6 +116,7 @@
             this.TXTBXEditCode.Size = new System.Drawing.Size(70, 21);
             this.TXTBXEditCode.TabIndex = 3;
             this.TXTBXEditCode.Visible = false;
+            this.TXTBXEditCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LoadInfo);
             // 
             // LBLEditCode
             // 
@@ -159,10 +134,12 @@
             this.groupBox2.Controls.Add(this.BTNICRegister);
             this.groupBox2.Controls.Add(this.CMBBXServiceInsuranceType);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.TXBXDescription);
+            this.groupBox2.Controls.Add(this.TXBXLatinName);
+            this.groupBox2.Controls.Add(this.TXBXServiceName);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.TXTBXNewCode);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -191,31 +168,6 @@
             // CMBBXServiceInsuranceType
             // 
             this.CMBBXServiceInsuranceType.FormattingEnabled = true;
-            this.CMBBXServiceInsuranceType.Items.AddRange(new object[] {
-            "1,نوع خدمت ويزيت مي باشد",
-            "2,نوع خدمت ، خدمت سرپائي مي باشد",
-            "3,خدمات راديولوژي",
-            "4,خدمات سونوگرافي",
-            "5,خدمات سي تي اسكن",
-            "6,خدمات ام آر آي",
-            "7,خدمات پزشكي هسته اي",
-            "8,خدمات راديوتراپي",
-            "9,خدمات اديومتري",
-            "10,خدمات گفتاردرماني",
-            "11,خدمات آنژيو گرافي",
-            "12,خدمات مكمل براقدامات تشخيصي",
-            "1,نوع خدمت ويزيت مي باشد",
-            "2,نوع خدمت ، خدمت سرپائي مي باشد",
-            "3,خدمات راديولوژي",
-            "4,خدمات سونوگرافي",
-            "5,خدمات سي تي اسكن",
-            "6,خدمات ام آر آي",
-            "7,خدمات پزشكي هسته اي",
-            "8,خدمات راديوتراپي",
-            "9,خدمات اديومتري",
-            "10,خدمات گفتاردرماني",
-            "11,خدمات آنژيو گرافي",
-            "12,خدمات مكمل براقدامات تشخيصي"});
             this.CMBBXServiceInsuranceType.Location = new System.Drawing.Point(449, 20);
             this.CMBBXServiceInsuranceType.Name = "CMBBXServiceInsuranceType";
             this.CMBBXServiceInsuranceType.Size = new System.Drawing.Size(203, 21);
@@ -224,24 +176,32 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 20);
+            this.comboBox1.Items.AddRange(new object[] {
+            "جراحی",
+            "پروتز",
+            "ترمیم",
+            "ارتودنسی",
+            "اندو",
+            "پریو",
+            "تشخیص"});
+            this.comboBox1.Location = new System.Drawing.Point(168, 20);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(205, 21);
             this.comboBox1.TabIndex = 4;
             // 
-            // textBox4
+            // TXBXDescription
             // 
-            this.textBox4.Location = new System.Drawing.Point(112, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(777, 21);
-            this.textBox4.TabIndex = 3;
+            this.TXBXDescription.Location = new System.Drawing.Point(112, 74);
+            this.TXBXDescription.Name = "TXBXDescription";
+            this.TXBXDescription.Size = new System.Drawing.Size(777, 21);
+            this.TXBXDescription.TabIndex = 3;
             // 
-            // textBox3
+            // TXBXServiceName
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 47);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(777, 21);
-            this.textBox3.TabIndex = 3;
+            this.TXBXServiceName.Location = new System.Drawing.Point(449, 47);
+            this.TXBXServiceName.Name = "TXBXServiceName";
+            this.TXBXServiceName.Size = new System.Drawing.Size(440, 21);
+            this.TXBXServiceName.TabIndex = 3;
             // 
             // label5
             // 
@@ -280,7 +240,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(323, 23);
+            this.label3.Location = new System.Drawing.Point(376, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
@@ -295,15 +255,71 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "کد :";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(376, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "نام لاتین :";
+            // 
+            // TXBXLatinName
+            // 
+            this.TXBXLatinName.Location = new System.Drawing.Point(112, 47);
+            this.TXBXLatinName.Name = "TXBXLatinName";
+            this.TXBXLatinName.Size = new System.Drawing.Size(261, 21);
+            this.TXBXLatinName.TabIndex = 3;
+            // 
+            // ServiceID
+            // 
+            this.ServiceID.DataPropertyName = "IDService";
+            this.ServiceID.HeaderText = "کد خدمت";
+            this.ServiceID.Name = "ServiceID";
+            this.ServiceID.ReadOnly = true;
+            this.ServiceID.Width = 60;
+            // 
+            // ServiceName
+            // 
+            this.ServiceName.DataPropertyName = "NameService";
+            this.ServiceName.HeaderText = "نام خدمت";
+            this.ServiceName.Name = "ServiceName";
+            this.ServiceName.ReadOnly = true;
+            this.ServiceName.Width = 300;
+            // 
+            // Info
+            // 
+            this.Info.DataPropertyName = "NodePtr";
+            this.Info.HeaderText = "توضیحات";
+            this.Info.Name = "Info";
+            this.Info.ReadOnly = true;
+            this.Info.Width = 300;
+            // 
+            // NameEnglish
+            // 
+            this.NameEnglish.DataPropertyName = "nameservice_latin";
+            this.NameEnglish.HeaderText = "نام لاتین خدمت";
+            this.NameEnglish.Name = "NameEnglish";
+            this.NameEnglish.ReadOnly = true;
+            this.NameEnglish.Width = 250;
+            // 
+            // SuperGroup
+            // 
+            this.SuperGroup.DataPropertyName = "IDSub";
+            this.SuperGroup.HeaderText = "سرگروه";
+            this.SuperGroup.Name = "SuperGroup";
+            this.SuperGroup.ReadOnly = true;
+            this.SuperGroup.Width = 55;
+            // 
             // FRMDeclareServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.Controls.Add(this.DTGServices);
             this.Controls.Add(this.TXTBXEditCode);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.LBLEditCode);
-            this.Controls.Add(this.DTGServices);
             this.Controls.Add(this.RDBTNEdit);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -332,16 +348,19 @@
         private System.Windows.Forms.TextBox TXTBXNewCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TXBXDescription;
+        private System.Windows.Forms.TextBox TXBXServiceName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private InsuranceServicesType CMBBXServiceInsuranceType;
         private IconnedButton BTNICRegister;
+        private System.Windows.Forms.TextBox TXBXLatinName;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Info;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameEnglish;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SuperGroup;
     }
 }
