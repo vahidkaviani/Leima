@@ -1,5 +1,6 @@
 ﻿using DermaDent.Document;
 using DermaDent.FormsV2;
+using DermaDent.WebAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace DermaDent
             Application.SetCompatibleTextRenderingDefault(false);
             using (Mutex mutex = new Mutex(false, "Global\\" + appGuid))
             {
+               
                 if (!mutex.WaitOne(0, false))
                 {
                     MessageBox.Show(" یک نسخه در حال اجرا می باشد");
@@ -33,9 +35,9 @@ namespace DermaDent
 
 
 #if DEBUG
-                Application.Run(new FRMDeclareServices());
+                //Application.Run(new FRMDeclareServices());
                 FRMAuthentication frm = new FRMAuthentication();
-                return;
+                //return;
                 if (frm.ShowDialog() != DialogResult.OK)
                     return;
                 Application.Run(new FRMHomePage(frm.SU_));

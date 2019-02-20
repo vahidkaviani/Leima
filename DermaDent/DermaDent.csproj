@@ -413,6 +413,7 @@
     <Compile Include="FormsV1\FRMUserProfileList.Designer.cs">
       <DependentUpon>FRMUserProfileList.cs</DependentUpon>
     </Compile>
+    <Compile Include="WebAPI\SMSPanel.cs" />
     <EmbeddedResource Include="CashPayment.resx">
       <DependentUpon>CashPayment.cs</DependentUpon>
     </EmbeddedResource>
@@ -668,6 +669,8 @@
     <None Include="Resources\User-Group-icon.png" />
     <None Include="Resources\WireSurgery.png" />
     <None Include="Resources\WireSurgeryBlack.png" />
+    <None Include="Resources\Telegram-512.png" />
+    <None Include="Resources\Telegram-32.png" />
     <Content Include="Resources\Yes.png" />
     <Content Include="Scripts\gridmvc.js" />
     <Content Include="Scripts\gridmvc.lang.fr.js" />

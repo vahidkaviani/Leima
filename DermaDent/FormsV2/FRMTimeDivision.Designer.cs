@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMTimeDivision));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,9 +50,9 @@
             this.CHBXSaturday = new System.Windows.Forms.CheckBox();
             this.iconnedButton2 = new DermaDent.IconnedButton();
             this.BTNAllocateTimes = new DermaDent.IconnedButton();
-            this.doctorNameComboBox1 = new DermaDent.DoctorNameComboBox();
             this.TXTBXDateTo = new DermaDent.PersianDateTimeBox();
             this.TXTBXDateFrom = new DermaDent.PersianDateTimeBox();
+            this.doctorNameComboBox1 = new DermaDent.DoctorNameComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -282,15 +281,6 @@
             this.BTNAllocateTimes.UseVisualStyleBackColor = true;
             this.BTNAllocateTimes.Click += new System.EventHandler(this.BTNAllocateTimes_Click);
             // 
-            // doctorNameComboBox1
-            // 
-            this.doctorNameComboBox1.DataSource = ((object)(resources.GetObject("doctorNameComboBox1.DataSource")));
-            this.doctorNameComboBox1.FormattingEnabled = true;
-            this.doctorNameComboBox1.Location = new System.Drawing.Point(12, 151);
-            this.doctorNameComboBox1.Name = "doctorNameComboBox1";
-            this.doctorNameComboBox1.Size = new System.Drawing.Size(295, 21);
-            this.doctorNameComboBox1.TabIndex = 10;
-            // 
             // TXTBXDateTo
             // 
             this.TXTBXDateTo.BadFormat = false;
@@ -319,15 +309,23 @@
             this.TXTBXDateFrom.TabIndex = 7;
             this.TXTBXDateFrom.Year = 0;
             // 
+            // doctorNameComboBox1
+            // 
+            this.doctorNameComboBox1.FormattingEnabled = true;
+            this.doctorNameComboBox1.Location = new System.Drawing.Point(12, 151);
+            this.doctorNameComboBox1.Name = "doctorNameComboBox1";
+            this.doctorNameComboBox1.Size = new System.Drawing.Size(295, 21);
+            this.doctorNameComboBox1.TabIndex = 13;
+            // 
             // FRMTimeDivision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 320);
+            this.Controls.Add(this.doctorNameComboBox1);
             this.Controls.Add(this.iconnedButton2);
             this.Controls.Add(this.BTNAllocateTimes);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.doctorNameComboBox1);
             this.Controls.Add(this.TXTBXTimeTo);
             this.Controls.Add(this.TXTBXTimeFrom);
             this.Controls.Add(this.TXTBXDateTo);
@@ -371,7 +369,6 @@
         private System.Windows.Forms.MaskedTextBox TXTBXTimeFrom;
         private System.Windows.Forms.MaskedTextBox TXTBXTimeTo;
         private System.Windows.Forms.Label label6;
-        private DoctorNameComboBox doctorNameComboBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox CHBXThursday;
         private System.Windows.Forms.CheckBox CHBXTuesday;
@@ -382,5 +379,6 @@
         private System.Windows.Forms.CheckBox CHBXSaturday;
         private IconnedButton BTNAllocateTimes;
         private IconnedButton iconnedButton2;
+        private DoctorNameComboBox doctorNameComboBox1;
     }
 }

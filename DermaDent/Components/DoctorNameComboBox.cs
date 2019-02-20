@@ -16,18 +16,25 @@ namespace DermaDent
         public static IList<string> drlist=new List<string>();
         public DoctorNameComboBox()
         {
+            //this.Items.Clear();
+            if (!DesignMode)
+            {
+                if (drlist.Count < 1)
+                    Init();
+
+                this.DataSource = drlist;
+            }
             InitializeComponent();
-            if (drlist.Count<1)
-                Init();
-            this.DataSource = drlist;
+            
+            
         }
         protected void Init()
         {
-            this.Items.Clear();
-            
-            var result = new DatabaseManager().GetData(@"SELECT  IDdentist
+            //this.Items.Clear();
+            //drlist.Clear();
+          var result = new DatabaseManager().GetData(@"SELECT  IDdentist
                                                                 ,LNamedentist
-                                                                ,FNamedentist
+                                                                ,FNamedentist 
                                                                 FROM Infodentist");
 
             for (int i = 0; i < result.Rows.Count; i++)

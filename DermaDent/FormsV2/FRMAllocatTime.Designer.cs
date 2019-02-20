@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMAllocatTime));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BTNClose = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -46,20 +46,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DTGVReservedTimeList = new System.Windows.Forms.DataGridView();
-            this.QueueNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VisitTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PatientFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PatientLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sendsms = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BTNSearchPatient = new DermaDent.IconnedButton();
@@ -89,6 +75,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.IBTNSendMessage = new System.Windows.Forms.Button();
+            this.QueueNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VisitTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PatientFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PatientLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sendsms = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVQList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DTGVReservedTimeList)).BeginInit();
@@ -124,6 +125,7 @@
             this.button6.Text = "گزارش فعالیت کاربران";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
             // 
             // button5
             // 
@@ -203,7 +205,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1176, 640);
+            this.tabPage2.Size = new System.Drawing.Size(1176, 635);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "رزرو وقت پزشکان";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -306,7 +308,7 @@
             this.PatientLastName,
             this.description,
             this.Column6,
-            this.Column12,
+            this.Mobile,
             this.Column7,
             this.Column8,
             this.Column9,
@@ -322,116 +324,6 @@
             this.DTGVReservedTimeList.Size = new System.Drawing.Size(940, 290);
             this.DTGVReservedTimeList.TabIndex = 9;
             this.DTGVReservedTimeList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.HandleTimeContextMenu);
-            // 
-            // QueueNo
-            // 
-            this.QueueNo.DataPropertyName = "id";
-            this.QueueNo.HeaderText = "ردیف";
-            this.QueueNo.Name = "QueueNo";
-            this.QueueNo.ReadOnly = true;
-            this.QueueNo.Width = 40;
-            // 
-            // VisitTime
-            // 
-            this.VisitTime.DataPropertyName = "time";
-            this.VisitTime.HeaderText = "ساعت";
-            this.VisitTime.Name = "VisitTime";
-            this.VisitTime.Width = 50;
-            // 
-            // pid
-            // 
-            this.pid.DataPropertyName = "PatientID";
-            this.pid.HeaderText = "# پرونده";
-            this.pid.Name = "pid";
-            this.pid.Width = 70;
-            // 
-            // PatientFirstName
-            // 
-            this.PatientFirstName.DataPropertyName = "FNamesick";
-            this.PatientFirstName.HeaderText = "نام";
-            this.PatientFirstName.Name = "PatientFirstName";
-            this.PatientFirstName.ReadOnly = true;
-            this.PatientFirstName.Width = 80;
-            // 
-            // PatientLastName
-            // 
-            this.PatientLastName.DataPropertyName = "LNamesick";
-            this.PatientLastName.HeaderText = "نام خانوادگی";
-            this.PatientLastName.Name = "PatientLastName";
-            this.PatientLastName.ReadOnly = true;
-            this.PatientLastName.Width = 90;
-            // 
-            // description
-            // 
-            this.description.DataPropertyName = "ServiceName";
-            this.description.HeaderText = "توضیحات";
-            this.description.Name = "description";
-            this.description.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.description.Width = 180;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Tel";
-            this.Column6.HeaderText = "تلفن ثابت";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 85;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "TelQuick";
-            this.Column12.HeaderText = "تلفن همراه";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 85;
-            // 
-            // Column7
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column7.HeaderText = "9";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 40;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "8";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 40;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = ";";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 40;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = ":";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 40;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "وضعیت";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
-            this.Status.Width = 70;
-            // 
-            // sendsms
-            // 
-            this.sendsms.DataPropertyName = "SendMessage";
-            this.sendsms.HeaderText = "ارسال sms";
-            this.sendsms.Name = "sendsms";
-            this.sendsms.ReadOnly = true;
-            this.sendsms.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.sendsms.Width = 80;
             // 
             // groupBox1
             // 
@@ -525,7 +417,7 @@
             // 
             this.doctorNameComboBox1.DataSource = ((object)(resources.GetObject("doctorNameComboBox1.DataSource")));
             this.doctorNameComboBox1.FormattingEnabled = true;
-  
+         
             this.doctorNameComboBox1.Location = new System.Drawing.Point(42, 121);
             this.doctorNameComboBox1.Name = "doctorNameComboBox1";
             this.doctorNameComboBox1.Size = new System.Drawing.Size(180, 21);
@@ -769,7 +661,7 @@
             this.statusStrip1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LBLWorkingUser});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 615);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 610);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.statusStrip1.Size = new System.Drawing.Size(1170, 22);
@@ -796,10 +688,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl1.Location = new System.Drawing.Point(0, 54);
+            this.tabControl1.Location = new System.Drawing.Point(0, 59);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1184, 666);
+            this.tabControl1.Size = new System.Drawing.Size(1184, 661);
             this.tabControl1.TabIndex = 2;
             // 
             // panel1
@@ -811,6 +703,7 @@
             this.panel1.Controls.Add(this.BTNDefineTimes);
             this.panel1.Controls.Add(this.BTNClose);
             this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.IBTNSendMessage);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.BTNAllocatedTime);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -818,6 +711,129 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1184, 53);
             this.panel1.TabIndex = 3;
+            // 
+            // IBTNSendMessage
+            // 
+            this.IBTNSendMessage.Image = global::DermaDent.Properties.Resources.Telegram_32;
+            this.IBTNSendMessage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.IBTNSendMessage.Location = new System.Drawing.Point(132, 3);
+            this.IBTNSendMessage.Name = "IBTNSendMessage";
+            this.IBTNSendMessage.Size = new System.Drawing.Size(139, 46);
+            this.IBTNSendMessage.TabIndex = 0;
+            this.IBTNSendMessage.Text = "اطلاع رسانی پیامکی نوبت";
+            this.IBTNSendMessage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.IBTNSendMessage.UseVisualStyleBackColor = true;
+            this.IBTNSendMessage.Click += new System.EventHandler(this.SendSmsReminder);
+            // 
+            // QueueNo
+            // 
+            this.QueueNo.DataPropertyName = "id";
+            this.QueueNo.HeaderText = "ردیف";
+            this.QueueNo.Name = "QueueNo";
+            this.QueueNo.ReadOnly = true;
+            this.QueueNo.Width = 40;
+            // 
+            // VisitTime
+            // 
+            this.VisitTime.DataPropertyName = "time";
+            this.VisitTime.HeaderText = "ساعت";
+            this.VisitTime.Name = "VisitTime";
+            this.VisitTime.Width = 50;
+            // 
+            // pid
+            // 
+            this.pid.DataPropertyName = "PatientID";
+            this.pid.HeaderText = "# پرونده";
+            this.pid.Name = "pid";
+            this.pid.Width = 70;
+            // 
+            // PatientFirstName
+            // 
+            this.PatientFirstName.DataPropertyName = "FNamesick";
+            this.PatientFirstName.HeaderText = "نام";
+            this.PatientFirstName.Name = "PatientFirstName";
+            this.PatientFirstName.ReadOnly = true;
+            this.PatientFirstName.Width = 80;
+            // 
+            // PatientLastName
+            // 
+            this.PatientLastName.DataPropertyName = "LNamesick";
+            this.PatientLastName.HeaderText = "نام خانوادگی";
+            this.PatientLastName.Name = "PatientLastName";
+            this.PatientLastName.ReadOnly = true;
+            this.PatientLastName.Width = 90;
+            // 
+            // description
+            // 
+            this.description.DataPropertyName = "ServiceName";
+            this.description.HeaderText = "توضیحات";
+            this.description.Name = "description";
+            this.description.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.description.Width = 180;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Tel";
+            this.Column6.HeaderText = "تلفن ثابت";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 85;
+            // 
+            // Mobile
+            // 
+            this.Mobile.DataPropertyName = "TelQuick";
+            this.Mobile.HeaderText = "تلفن همراه";
+            this.Mobile.Name = "Mobile";
+            this.Mobile.ReadOnly = true;
+            this.Mobile.Width = 85;
+            // 
+            // Column7
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column7.HeaderText = "9";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 40;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "8";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 40;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = ";";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 40;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = ":";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 40;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "وضعیت";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            this.Status.Width = 70;
+            // 
+            // sendsms
+            // 
+            this.sendsms.DataPropertyName = "SendMessage";
+            this.sendsms.HeaderText = "ارسال sms";
+            this.sendsms.Name = "sendsms";
+            this.sendsms.ReadOnly = true;
+            this.sendsms.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.sendsms.Width = 80;
             // 
             // FRMAllocatTime
             // 
@@ -894,6 +910,7 @@
         private System.Windows.Forms.Label LBLLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button IBTNSendMessage;
         private System.Windows.Forms.DataGridViewTextBoxColumn QueueNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn VisitTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn pid;
@@ -901,7 +918,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PatientLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;

@@ -1,4 +1,5 @@
 ﻿using DermaDent.FormsV2;
+using DermaDent.WebAPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -330,7 +331,18 @@ namespace DermaDent
 
         private void sendNotificationMessage(object sender, EventArgs e)
         {
-            MessageBox.Show("کاربر گرامی\r\nبا عرض پوزش پنل ارسال پیامک شما فعال نیست", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
+            string mob = DTGVReservedTimeList.Rows[SelectedItemListview].Cells["Mobile"].Value.ToString();
+            string weekday = PersianDateTime.GetDayOfWeekName(farsiCalendar1.SelectedDateGreGorian);
+            string monthname = PersianDateTime.Months[farsiCalendar1._PresentingMonth];
+            string dayofMont = farsiCalendar1._SelectedDay.ToString();
+            string header = "با سلام\r\nبه اطلاع می رساند نوبت دندانپزشکی شما روز";
+            string footer = "می باشد.\r\nلطفا در صورت لغو 24 ساعت قبل با مطب هماهنگ فرمایید.\r\nبا تشکر مطب دکتر سید محمدرضا صفوی";
+            string template = string.Format("{0} {1} {2} {3} {4}", header, weekday, dayofMont, monthname, footer);
+            List<string> rec = new List<string>();
+            rec.Add(mob);
+            SMSPanel.SendSMS(rec, template);
+            // SMSPanel.SendSMS("test");
+            //MessageBox.Show("کاربر گرامی\r\nبا عرض پوزش پنل ارسال پیامک شما فعال نیست", "توجه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
         }
 
         private void createNewVisitTime(object sender, EventArgs e)
@@ -435,6 +447,43 @@ namespace DermaDent
                 int drId = int.Parse(GVQList.Rows[SelectedItemListview].Cells[0].Value.ToString().Split(',')[0]);
                 updateTimeLists(true, drId, false);
             }
+        }
+
+        private void SendSmsReminder(object sender, EventArgs e)
+        {
+            string result = farsiCalendar1.GetSelectedDate();
+            
+
+            var recList = Transaction.GetReservedTime(farsiCalendar1.SelectedDate, farsiCalendar1.SelectedDate, OnlyAllocated: true);
+
+            string weekday = PersianDateTime.GetDayOfWeekName(farsiCalendar1.SelectedDateGreGorian);
+            string monthname = PersianDateTime.Months[farsiCalendar1._PresentingMonth];
+            string dayofMont = farsiCalendar1._SelectedDay.ToString();
+            string header = "با سلام\r\nبه اطلاع می رساند نوبت دندانپزشکی شما روز";
+            string footer = "می باشد.\r\nلطفا در صورت کنسلی 24 ساعت قبل به مطب اطلاع دهید.\r\nبا تشکر\r\nمطب دکتر محمدرضا صفوی";
+            string template = string.Format("{0} {1} {2} {3} {4}", header, weekday, dayofMont, monthname, footer);
+            List<string> rec = new List<string>();
+
+            for (int i = 0; i < recList.Rows.Count; i++)
+            {
+                if (recList.Rows[i]["TelQuick"] != DBNull.Value)
+                {
+                    rec.Add((string)recList.Rows[i]["TelQuick"]);
+                }
+            }
+
+            string message = string.Format("آیا می خواهید به {1} بیمار روز {0} اطلاع رسانی پیامکی شود ؟", result,rec.Count);
+            if (MessageBox.Show(message, "ارسال پیام", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign) != DialogResult.Yes)
+                return;
+            DateTime sentdate = farsiCalendar1.SelectedDateGreGorian.AddDays(-1);
+            if (sentdate < DateTime.Now.AddHours(12))
+                SMSPanel.SendSMS(rec, template);
+            else
+                SMSPanel.SendSMS(rec, template, sentdate);
+
+
+
+            MessageBox.Show("ارسال شد!");
         }
     }
 }
