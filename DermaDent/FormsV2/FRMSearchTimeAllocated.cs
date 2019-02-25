@@ -32,9 +32,9 @@ namespace DermaDent
             DateTime to = DateTime.Now;
             to.AddHours(24 - DateTime.Now.Hour);
             if(CHKBX.Checked)
-                DGVPatientVisitingTimes.DataSource = Transaction.GetReservedTime(PersianDateTime.GetPersianDate(DateTime.Now),PersianDateTime.GetPersianDate(DateTime.Now), PatientID: TXTBXID.Text, PFirstName: TXTBXFirstName.Text, PLastName: TXTBXLastName.Text);
+                DGVPatientVisitingTimes.DataSource = Transaction.GetReservedTime(PersianDateTime.GetPersianDate(DateTime.Now),PersianDateTime.GetPersianDate(DateTime.Now), PatientID: TXTBXID.Text, PFirstName: TXTBXFirstName.Text, PLastName: TXTBXLastName.Text,OnlyAllocated:true);
             else
-                DGVPatientVisitingTimes.DataSource = Transaction.GetReservedTime(PersianDateTime.GetPersianDate(DateTime.Now), PersianDateTime.GetPersianDate(DateTime.Now.AddYears(3)), PatientID: TXTBXID.Text, PFirstName: TXTBXFirstName.Text, PLastName: TXTBXLastName.Text);
+                DGVPatientVisitingTimes.DataSource = Transaction.GetReservedTime(PersianDateTime.GetPersianDate(DateTime.Now), PersianDateTime.GetPersianDate(DateTime.Now.AddYears(3)), PatientID: TXTBXID.Text, PFirstName: TXTBXFirstName.Text, PLastName: TXTBXLastName.Text, OnlyAllocated: true);
         }
 
         private void TXTBXID_KeyPress(object sender, KeyPressEventArgs e)

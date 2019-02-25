@@ -56,6 +56,7 @@
             this.LSTPatientLST = new System.Windows.Forms.ToolStripMenuItem();
             this.امکاناتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.مدیریتتصاویررادیوگرافیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditSMSNotificationContent = new System.Windows.Forms.ToolStripMenuItem();
             this.دربارهنرمافزارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTNAboutUs = new System.Windows.Forms.ToolStripMenuItem();
             this.TTBTNErrorReport = new System.Windows.Forms.ToolStripMenuItem();
@@ -259,7 +260,8 @@
             // امکاناتToolStripMenuItem
             // 
             this.امکاناتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.مدیریتتصاویررادیوگرافیToolStripMenuItem});
+            this.مدیریتتصاویررادیوگرافیToolStripMenuItem,
+            this.EditSMSNotificationContent});
             this.امکاناتToolStripMenuItem.Name = "امکاناتToolStripMenuItem";
             resources.ApplyResources(this.امکاناتToolStripMenuItem, "امکاناتToolStripMenuItem");
             // 
@@ -267,6 +269,13 @@
             // 
             this.مدیریتتصاویررادیوگرافیToolStripMenuItem.Name = "مدیریتتصاویررادیوگرافیToolStripMenuItem";
             resources.ApplyResources(this.مدیریتتصاویررادیوگرافیToolStripMenuItem, "مدیریتتصاویررادیوگرافیToolStripMenuItem");
+            // 
+            // EditSMSNotificationContent
+            // 
+            this.EditSMSNotificationContent.Image = global::DermaDent.Properties.Resources.sms;
+            this.EditSMSNotificationContent.Name = "EditSMSNotificationContent";
+            resources.ApplyResources(this.EditSMSNotificationContent, "EditSMSNotificationContent");
+            this.EditSMSNotificationContent.Click += new System.EventHandler(this.EditSMSNotificationContent_Click);
             // 
             // دربارهنرمافزارToolStripMenuItem
             // 
@@ -344,6 +353,7 @@
             this.BTNPanelEdit.Image = global::DermaDent.Properties.Resources.Text_Edit_icon;
             this.BTNPanelEdit.Name = "BTNPanelEdit";
             this.BTNPanelEdit.UseVisualStyleBackColor = true;
+            this.BTNPanelEdit.Click += new System.EventHandler(this.BTNPanelEdit_Click);
             // 
             // BTNPanelRegistery
             // 
@@ -461,5 +471,6 @@
         private System.Windows.Forms.ToolStripMenuItem LSTPatientLST;
         private System.Windows.Forms.ToolStripMenuItem TTTimeDetails;
         private System.Windows.Forms.ToolStripMenuItem جستوجویسریعToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem EditSMSNotificationContent;
     }
 }

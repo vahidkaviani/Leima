@@ -245,6 +245,12 @@
     <Compile Include="FormsV2\FRMSearchTimeAllocated.Designer.cs">
       <DependentUpon>FRMSearchTimeAllocated.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsV2\FRMSMSTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsV2\FRMSMSTemplate.Designer.cs">
+      <DependentUpon>FRMSMSTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsV2\FRMState.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -483,6 +489,9 @@
     <EmbeddedResource Include="FormsV2\FRMSearchTimeAllocated.resx">
       <DependentUpon>FRMSearchTimeAllocated.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsV2\FRMSMSTemplate.resx">
+      <DependentUpon>FRMSMSTemplate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsV2\FRMState.resx">
       <DependentUpon>FRMState.cs</DependentUpon>
     </EmbeddedResource>
@@ -659,6 +668,7 @@
     <Content Include="Resources\Save.png" />
     <Content Include="Resources\Search.png" />
     <None Include="Resources\skleton.png" />
+    <None Include="Resources\sms.png" />
     <Content Include="Resources\Table.png" />
     <None Include="Resources\vector-wallpapers-25341-9610475.jpg" />
     <None Include="Resources\Text-Edit-icon.png" />

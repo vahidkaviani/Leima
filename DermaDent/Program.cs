@@ -38,9 +38,10 @@ namespace DermaDent
                 //Application.Run(new FRMDeclareServices());
                 FRMAuthentication frm = new FRMAuthentication();
                 //return;
-                if (frm.ShowDialog() != DialogResult.OK)
-                    return;
-                Application.Run(new FRMHomePage(frm.SU_));
+                //if (frm.ShowDialog() != DialogResult.OK)
+                //    return;
+                Application.Run(new FRMSearchPatient());
+                return;
                 Application.Run(new FRMTimeDivision());
 
                 Application.Run(new FRMDeclareServices ());

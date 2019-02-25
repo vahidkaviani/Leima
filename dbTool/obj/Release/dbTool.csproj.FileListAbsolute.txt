@@ -7,3 +7,5 @@ E:\Private\den\Solident_1397.11.06\dbTool\obj\Release\dbTool.Properties.Resource
 E:\Private\den\Solident_1397.11.06\dbTool\obj\Release\dbTool.csproj.GenerateResource.Cache
 E:\Private\den\Solident_1397.11.06\dbTool\obj\Release\dbTool.exe
 E:\Private\den\Solident_1397.11.06\dbTool\obj\Release\dbTool.pdb
+E:\Private\dowranset\Leima\dbTool\bin\Release\dbTool.exe.config
+E:\Private\dowranset\Leima\dbTool\obj\Release\dbTool.exe

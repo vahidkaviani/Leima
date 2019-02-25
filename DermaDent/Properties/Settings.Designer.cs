@@ -82,5 +82,53 @@ namespace DermaDent.Properties {
                 this["_UserDocumentRootPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string OutPutSMSNumbre {
+            get {
+                return ((string)(this["OutPutSMSNumbre"]));
+            }
+            set {
+                this["OutPutSMSNumbre"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SMSTemplate {
+            get {
+                return ((string)(this["SMSTemplate"]));
+            }
+            set {
+                this["SMSTemplate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SMSPanelUserName {
+            get {
+                return ((string)(this["SMSPanelUserName"]));
+            }
+            set {
+                this["SMSPanelUserName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SMSPanellPass {
+            get {
+                return ((string)(this["SMSPanellPass"]));
+            }
+            set {
+                this["SMSPanellPass"] = value;
+            }
+        }
     }
 }

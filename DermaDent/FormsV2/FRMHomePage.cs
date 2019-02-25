@@ -184,5 +184,16 @@ namespace DermaDent
             FRMSearchPatient FSP = new FRMSearchPatient();
             FSP.ShowDialog();
         }
+
+        private void EditSMSNotificationContent_Click(object sender, EventArgs e)
+        {
+            FRMSMSTemplate frmt = new FRMSMSTemplate();
+            frmt.ShowDialog();
+        }
+
+        private void BTNPanelEdit_Click(object sender, EventArgs e)
+        {
+            DisplayNewPatientRegisterForm();
+        }
     }
 }

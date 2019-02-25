@@ -61,3 +61,4 @@ E:\Private\dowranset\Leima\DermaDent\obj\Release\fa-IR\Solident.resources.dll
 E:\Private\dowranset\Leima\DermaDent\obj\Release\Solident.exe
 E:\Private\dowranset\Leima\DermaDent\obj\Release\Solident.pdb
 E:\Private\dowranset\Leima\DermaDent\obj\Release\DermaDent.csprojResolveAssemblyReference.cache
+E:\Private\dowranset\Leima\DermaDent\obj\Release\DermaDent.FormsV2.FRMSMSTemplate.resources

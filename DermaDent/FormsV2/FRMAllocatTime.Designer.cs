@@ -89,7 +89,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sendsms = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sendsms = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GVQList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DTGVReservedTimeList)).BeginInit();
@@ -417,7 +417,7 @@
             // 
             this.doctorNameComboBox1.DataSource = ((object)(resources.GetObject("doctorNameComboBox1.DataSource")));
             this.doctorNameComboBox1.FormattingEnabled = true;
-         
+
             this.doctorNameComboBox1.Location = new System.Drawing.Point(42, 121);
             this.doctorNameComboBox1.Name = "doctorNameComboBox1";
             this.doctorNameComboBox1.Size = new System.Drawing.Size(180, 21);
@@ -829,10 +829,14 @@
             // sendsms
             // 
             this.sendsms.DataPropertyName = "SendMessage";
+            this.sendsms.FalseValue = "True";
+            this.sendsms.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sendsms.HeaderText = "ارسال sms";
             this.sendsms.Name = "sendsms";
             this.sendsms.ReadOnly = true;
             this.sendsms.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.sendsms.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.sendsms.TrueValue = "False";
             this.sendsms.Width = 80;
             // 
             // FRMAllocatTime
@@ -924,6 +928,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sendsms;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn sendsms;
     }
 }

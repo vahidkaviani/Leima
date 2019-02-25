@@ -17,5 +17,17 @@
     <Setting Name="_UserDocumentRootPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\Solident\Documents</Value>
     </Setting>
+    <Setting Name="OutPutSMSNumbre" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SMSTemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SMSPanelUserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SMSPanellPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

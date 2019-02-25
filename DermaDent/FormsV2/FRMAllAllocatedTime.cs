@@ -52,7 +52,7 @@ namespace DermaDent
 
         private void updateVisitTime()
         {
-            dataGridView1.DataSource = Transaction.GetReservedTime(persianDateTimeBox1.Text, persianDateTimeBox2.Text, PatientID: TXTBXID.Text);
+            dataGridView1.DataSource = Transaction.GetReservedTime(persianDateTimeBox1.Text, persianDateTimeBox2.Text, PatientID: TXTBXID.Text,OnlyAllocated:true);
         }
 
         private void BTNICClose_Click(object sender, EventArgs e)

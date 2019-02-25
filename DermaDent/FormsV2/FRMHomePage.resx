@@ -309,10 +309,16 @@
     <value>گزارش‌ها</value>
   </data>
   <data name="مدیریتتصاویررادیوگرافیToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 22</value>
+    <value>217, 22</value>
   </data>
   <data name="مدیریتتصاویررادیوگرافیToolStripMenuItem.Text" xml:space="preserve">
     <value>RVG</value>
+  </data>
+  <data name="EditSMSNotificationContent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 22</value>
+  </data>
+  <data name="EditSMSNotificationContent.Text" xml:space="preserve">
+    <value>تنظیمات پیامک اطلاع رسانی</value>
   </data>
   <data name="امکاناتToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 20</value>
@@ -1948,6 +1954,12 @@
     <value>مدیریتتصاویررادیوگرافیToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;مدیریتتصاویررادیوگرافیToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditSMSNotificationContent.Name" xml:space="preserve">
+    <value>EditSMSNotificationContent</value>
+  </data>
+  <data name="&gt;&gt;EditSMSNotificationContent.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;دربارهنرمافزارToolStripMenuItem.Name" xml:space="preserve">
