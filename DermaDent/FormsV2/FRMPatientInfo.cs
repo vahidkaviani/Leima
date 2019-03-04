@@ -20,9 +20,11 @@ namespace DermaDent
             InitializeComponent();
 
             CMBBXColor.DrawItem += new DrawItemEventHandler(CMBBXColor_DrawItem);
-
-            LBLLastID.Text =Culture.ConvertNumerals(LBLLastID.Text);
-
+            try
+            {
+                LBLLastID.Text = Culture.ConvertNumerals(Transaction.GetLastPatient().FileID);
+            }
+            catch { }
             workingUserForm = id_user;
 
             for (int i = 0; i < cl.Length; i++)
